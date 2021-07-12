@@ -1,5 +1,6 @@
 import { Header } from '../Header/Header'
 import { Filter } from '../Filter/Filter'
+import { GraphCollection } from '../GraphCollection/GraphCollection'
 import './App.css';
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <main>
       <Header />
       <Filter />
+      <GraphCollection />
     </main>
   );
 }
