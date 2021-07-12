@@ -1,9 +1,16 @@
+import { Header } from '../Header/Header'
+import { Filter } from '../Filter/Filter'
+import { GraphCollection } from '../GraphCollection/GraphCollection'
 import './App.css';
 
 const App = () => {
   return (
-    <h1>This is APP!</h1>
-  )
+    <main>
+      <Header />
+      <Filter />
+      <GraphCollection />
+    </main>
+  );
 }
 
 export { App };
