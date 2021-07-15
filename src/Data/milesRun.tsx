@@ -63,11 +63,11 @@ const milesRun = {
     may: 534,
     jun: 342,
     jul: 150,
-    aug: 0,
-    sep: 0,
-    oct: 0,
-    nov: 0,
-    dec: 0,
+    aug: '',
+    sep: '',
+    oct: '',
+    nov: '',
+    dec: '',
   },
 }
 
