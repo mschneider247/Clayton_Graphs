@@ -12,8 +12,25 @@
 // only asset values should change.
 //
 //jan: {
-//      Steven: [[totalCashValue, totalAssetValue], [newAssetName, assetQuantity, assetPurchasePrice]]
-//      Clayton: [[totalCashValue, totalAssetValue]],
+//      Steven: {
+//        totalValue: [439, 1123],
+//      exchanges: [
+//        {
+//          assetName: "Tesla", 
+//          quantity: 0.5,
+//          price: 648.12
+//        },
+//        {
+//          assetName: "Game Stop",
+//          quantity: -4,
+//          price: 178,
+//        }
+//      ],
+//      },
+//    Clayton: {
+//      totalValue: [339, 1223],
+//      exchanges: []
+//      },
 //    },
 
 
@@ -34,7 +51,7 @@ const altAssetChallenge = {
             quantity: -4,
             price: 178,
           }
-        ],
+          ],
         },
       Clayton: {
         totalValue: [339, 1223],
@@ -46,7 +63,7 @@ const altAssetChallenge = {
       Steven: {
         totalValue: [814, 373],
         exchanges: [],
-      },
+        },
       Clayton: {
         totalValue: [339, 1223],
         exchanges: [
@@ -55,7 +72,7 @@ const altAssetChallenge = {
             quantity: 300,
             price: 0.07,
           }
-        ]
+          ],
         },
       },
 
@@ -63,65 +80,65 @@ const altAssetChallenge = {
       Steven: {
         totalValue: [549, 1243],
         exchanges: [],
-      },
+        },
       Clayton: {
         totalValue: [318, 1244],
         exchanges: []
+        },
       },
-    },
+
     apr: {
       Steven: {
         totalValue: [549, 1468],
         exchanges: [],
-      },
+        },
       Clayton: {
         totalValue: [318, 1299],
         exchanges: []
+        },
       },
-    },
+
     may: {
       Steven: {
         totalValue: [549, 1220],
         exchanges: [],
-      },
+        },
       Clayton: {
         totalValue: [318, 1159],
         newPurchases: []
+        },
       },
-    },
+
     jun: {
       Steven: {
         totalValue: [549, 1243],
         exchanges: [],
-      },
+        },
       Clayton: {
-        totalValue: [39, 1673],
+        totalValue: [318, 1673],
         newPurchases: []
+        },
       },
-    },
+
     jul: {
       Steven: {
         totalValue: [549, 1243],
         exchanges: [],
-      },
+        },
       Clayton: {
-        totalValue: [39, 1673],
+        totalValue: [318, 1673],
         newPurchases: []
+        },
       },
-    },
-    aug: {
-      Steven: {
-        totalValue: [549, 1243],
-        exchanges: [],
-      },
-      Clayton: {
-        totalValue: [39, 1673],
-        newPurchases: []
-      },
-    },
+
+    aug: '',
+
     sep: '',
+
     oct: '',
+
     nov: '',
+
     dec: '',
   },
 }
