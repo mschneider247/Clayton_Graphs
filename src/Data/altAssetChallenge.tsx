@@ -13,7 +13,7 @@
 //
 //jan: {
 //      Steven: {
-//        totalValue: [439, 1123],
+//        totalValue: [439<=totalCash, 1123<=totalAssetValue],
 //      exchanges: [
 //        {
 //          assetName: "Tesla", 

@@ -29,4 +29,4 @@ const swingTrade = {
   },
 }
 
-export { swingTrades }
+export { swingTrade }
