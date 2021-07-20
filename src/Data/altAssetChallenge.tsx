@@ -131,15 +131,60 @@ const altAssetChallenge = {
         },
       },
 
-    aug: {},
+    aug: {
+      Steven: {
+        totalValue: [],
+        exchanges: []
+      },
+      Clayton: {
+        totalValue: [],
+        exchanges: []
+      }
+    },
 
-    sep: {},
+    sep: {
+      Steven: {
+        totalValue: [],
+        exchanges: []
+      },
+      Clayton: {
+        totalValue: [],
+        exchanges: []
+      }
+    },
 
-    oct: {},
+    oct: {
+      Steven: {
+        totalValue: [],
+        exchanges: []
+      },
+      Clayton: {
+        totalValue: [],
+        exchanges: []
+      }
+    },
 
-    nov: {},
+    nov: {
+      Steven: {
+        totalValue: [],
+        exchanges: []
+      },
+      Clayton: {
+        totalValue: [],
+        exchanges: []
+      }
+    },
 
-    dec: {},
+    dec: {
+      Steven: {
+        totalValue: [],
+        exchanges: []
+      },
+      Clayton: {
+        totalValue: [],
+        exchanges: []
+      }
+    },
   },
 }
 

@@ -1,4 +1,4 @@
-const longTermNonTechInvesting = {
+const collectables = {
   2020: {
     jan: [
       {
@@ -99,4 +99,4 @@ const longTermNonTechInvesting = {
   },
 }   
 
-export { longTermNonTechInvesting }
+export { collectables }
