@@ -35,11 +35,11 @@ const subscriberCount = {
     may: 165,
     jun: 123,
     jul: 149,
-    aug: '',
-    sep: '',
-    oct: '',
-    nov: '',
-    dec: '',
+    aug: 0,
+    sep: 0,
+    oct: 0,
+    nov: 0,
+    dec: 0,
   },
 }
 

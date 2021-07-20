@@ -13,7 +13,7 @@
 //
 //jan: {
 //      Steven: {
-//        totalValue: [439, 1123],
+//        totalValue: [439<=totalCash, 1123<=totalAssetValue],
 //      exchanges: [
 //        {
 //          assetName: "Tesla", 
@@ -131,15 +131,60 @@ const altAssetChallenge = {
         },
       },
 
-    aug: '',
+    aug: {
+      Steven: {
+        totalValue: [],
+        exchanges: []
+      },
+      Clayton: {
+        totalValue: [],
+        exchanges: []
+      }
+    },
 
-    sep: '',
+    sep: {
+      Steven: {
+        totalValue: [],
+        exchanges: []
+      },
+      Clayton: {
+        totalValue: [],
+        exchanges: []
+      }
+    },
 
-    oct: '',
+    oct: {
+      Steven: {
+        totalValue: [],
+        exchanges: []
+      },
+      Clayton: {
+        totalValue: [],
+        exchanges: []
+      }
+    },
 
-    nov: '',
+    nov: {
+      Steven: {
+        totalValue: [],
+        exchanges: []
+      },
+      Clayton: {
+        totalValue: [],
+        exchanges: []
+      }
+    },
 
-    dec: '',
+    dec: {
+      Steven: {
+        totalValue: [],
+        exchanges: []
+      },
+      Clayton: {
+        totalValue: [],
+        exchanges: []
+      }
+    },
   },
 }
 
