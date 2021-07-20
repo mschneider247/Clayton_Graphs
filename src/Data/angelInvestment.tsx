@@ -21,11 +21,11 @@ const angelInvestment = {
     may: 2,
     jun: 5,
     jul: 1,
-    aug: '',
-    sep: '',
-    oct: '',
-    nov: '',
-    dec: '',
+    aug: 0,
+    sep: 0,
+    oct: 0,
+    nov: 0,
+    dec: 0,
   },
 }
 

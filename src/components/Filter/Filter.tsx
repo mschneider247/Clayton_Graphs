@@ -2,7 +2,7 @@ import './Filter';
 
 const Filter = () => {
 
-  const categories: string[] = ["All", "Finance", "Tech", "Health", "Fitness"]
+  const categories: string[] = ["All", "Investments", "Collectables", "Fitness"]
   return (
     <section>
       {categories.map((category, index) => {

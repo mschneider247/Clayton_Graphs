@@ -91,11 +91,11 @@ const longTermNonTechInvesting = {
         type: "books"
       }
     ],
-    aug: '',
-    sep: '',
-    oct: '',
-    nov: '',
-    dec: '',
+    aug: [],
+    sep: [],
+    oct: [],
+    nov: [],
+    dec: [],
   },
 }   
 

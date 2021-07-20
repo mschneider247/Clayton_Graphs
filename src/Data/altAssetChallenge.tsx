@@ -131,15 +131,15 @@ const altAssetChallenge = {
         },
       },
 
-    aug: '',
+    aug: {},
 
-    sep: '',
+    sep: {},
 
-    oct: '',
+    oct: {},
 
-    nov: '',
+    nov: {},
 
-    dec: '',
+    dec: {},
   },
 }
 
