@@ -5,7 +5,18 @@ interface IProps {
 }
 const GraphNavigation = (props: IProps) => {
   return (
-    <h5>This is a graph a navagation</h5>
+    <nav>
+      {props.years.map((year, index) => {
+        return (
+          <button
+            key={index}
+            onClick={() => props.handler(year)}
+          >
+            {year}
+          </button>
+        )
+      })}
+    </nav>
   )
 }
 

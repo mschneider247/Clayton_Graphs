@@ -18,15 +18,17 @@ const GraphCard = (props:IGraph) => {
 
   const years:string[] = Object.keys(props.data)
 
+  //
+
 
   return (
     <section>
+      <p>This is the graph card. It holds state, controlling graph navigation and chart display</p>
       <GraphNavigation 
         handler={setYearFilter}
         years={years}
         yearFilter={yearFilter}
       />
-      <p>This is the graph card. It holds state, controlling graph navigation and chart display</p>
     </section>
   )
 }
