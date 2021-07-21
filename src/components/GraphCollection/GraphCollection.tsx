@@ -1,4 +1,5 @@
-import { Graph } from '../Graph/Graph';
+import { useState } from 'react'
+import { GraphCard } from '../GraphCard/GraphCard';
 import './GraphCollection.css';
 
 interface IGraph {
@@ -16,7 +17,7 @@ const GraphCollection = (props: IProps) => {
 
   const graphs = props.graphs.map(graph => {
     return (
-      <Graph
+      <GraphCard
         key={graph.id}
         id={graph.id}
         name={graph.name}
@@ -28,7 +29,7 @@ const GraphCollection = (props: IProps) => {
 
   return (
     <section>
-      {graphs[0]}
+      {graphs}
     </section>
   )
 }
