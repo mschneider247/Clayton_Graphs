@@ -9,7 +9,8 @@ Do you like keeping data on anything and everything? Wouldn't it be nice to have
 ## Tech Stack:
 - TypeScript
 - React
-- Styled Components
+- Chart.js
+- react-chartjs-2
 
 ## Install:
 - Clone down your own copy of the repository

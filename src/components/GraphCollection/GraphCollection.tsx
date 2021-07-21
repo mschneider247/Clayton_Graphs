@@ -1,5 +1,5 @@
 import { Graph } from '../Graph/Graph';
-import './GraphCollection.css'
+import './GraphCollection.css';
 
 interface IGraph {
   id: number;
@@ -16,18 +16,19 @@ const GraphCollection = (props: IProps) => {
 
   const graphs = props.graphs.map(graph => {
     return (
-      <Graph 
+      <Graph
+        key={graph.id}
         id={graph.id}
         name={graph.name}
         type={graph.type}
         data={graph.data}
       />
-    )
+    );
   })
 
   return (
     <section>
-      {graphs}
+      {graphs[0]}
     </section>
   )
 }
