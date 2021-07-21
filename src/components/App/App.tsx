@@ -128,7 +128,7 @@ interface IGraph {
   id: number;
   name: string;
   type: string;
-  data?: {};
+  data: {};
 }
 
 const graphs:IGraph[] = [];
@@ -188,7 +188,7 @@ const App = () => {
       <Header />
       <Filter />
       {!loading &&
-        <GraphCollection />
+        <GraphCollection graphs={graphCollection}/>
       }
     </main>
   );

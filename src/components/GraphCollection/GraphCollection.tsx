@@ -1,7 +1,18 @@
 import { Graph } from '../Graph/Graph';
 import './GraphCollection.css'
 
-const GraphCollection = () => {
+interface IGraph {
+  id: number;
+  name: string;
+  type: string;
+  data: {};
+}
+
+interface IProps {
+  graphs: IGraph[];
+}
+
+const GraphCollection = (props: IProps) => {
   return (
     <section>
       <Graph />
