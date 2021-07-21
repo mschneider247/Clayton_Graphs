@@ -1,15 +1,16 @@
 import "./Graph.css";
 
-const Graph = () => {
+interface IGraph {
+  id: number;
+  name: string;
+  type: string;
+  data: {};
+}
+
+const Graph = (props:IGraph) => {
   return (
     <article>
-      <ul>
-        <li>graph -</li>
-        <li>graph  -</li>
-        <li>graph   -</li>
-        <li>graph  -</li>
-        <li>graph -</li>
-      </ul>
+      <h4>{props.name}</h4>
     </article>
   )
 }

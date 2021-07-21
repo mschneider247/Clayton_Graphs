@@ -13,11 +13,21 @@ interface IProps {
 }
 
 const GraphCollection = (props: IProps) => {
+
+  const graphs = props.graphs.map(graph => {
+    return (
+      <Graph 
+        id={graph.id}
+        name={graph.name}
+        type={graph.type}
+        data={graph.data}
+      />
+    )
+  })
+
   return (
     <section>
-      <Graph />
-      <Graph />
-      <Graph />
+      {graphs}
     </section>
   )
 }
