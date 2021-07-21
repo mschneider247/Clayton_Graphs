@@ -2,7 +2,5 @@
   "short_name": "Clayton Graphs",
   "name": "Clayton Graphs",
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#000000"
+  "display": "standalone"
 }
