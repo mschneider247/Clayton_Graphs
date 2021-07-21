@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Header } from '../Header/Header'
 import { Filter } from '../Filter/Filter'
 import { GraphCollection } from '../GraphCollection/GraphCollection'
@@ -123,19 +124,72 @@ interface ICollectables {
   2021: IYearCollectable;
 }
 
+interface IGraph {
+  id: number;
+  name: string;
+  type: string;
+  data?: {};
+}
+
+const graphs:IGraph[] = [];
+
 const App = () => {
 
-  const displayData = (data: ICollectables) => {
-    console.log("data::", data)
-  }
-  
-  displayData(collectables);
+  const [graphCollection, setGraphCollection]: [IGraph[], (graphs: IGraph[]) => void] = useState(graphs);
+
+  const [loading, setLoading]: [boolean, (loading: boolean) => void] = useState<boolean>(true);
+
+  useEffect(() => {
+    let buildGraphs:IGraph[] = [
+      {
+        id: 1,
+        name: "Miles Run",
+        type: "Fitness",
+        data: milesRun
+      },
+      {
+        id: 2,
+        name: "Subscriber Count",
+        type: "Subscribers",
+        data: subscriberCount,
+      },
+      {
+        id: 3,
+        name: "Alternative Asset Bankroll Challenge",
+        type: "Investments",
+        data: altAssetChallenge,
+      },
+      {
+        id: 4,
+        name: "Angel Investments",
+        type: "Investments",
+        data: angelInvestment,
+      },
+      {
+        id: 5,
+        name: "Swing Trades",
+        type: "Investments",
+        data: swingTrade,
+      },
+      {
+        id: 6,
+        name: "Collectables",
+        type: "Investments",
+        data: collectables,
+      }
+    ];
+
+    setGraphCollection(buildGraphs)  
+    setLoading(false);
+  }, []);
 
   return (
     <main>
       <Header />
       <Filter />
-      <GraphCollection />
+      {!loading &&
+        <GraphCollection />
+      }
     </main>
   );
 }
