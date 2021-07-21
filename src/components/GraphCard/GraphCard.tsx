@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { GraphNavigation } from '../GraphNavigation/GraphNavigation'
 
 interface IGraph {
   id: number;
@@ -7,8 +9,25 @@ interface IGraph {
 }
 
 const GraphCard = (props:IGraph) => {
+
+  console.log("Here we have props.data", props.data)
+
+  console.log("Navigation should get ::", Object.keys(props.data))
+
+  const [yearFilter, setYearFilter]: [string, (yearFilter: string) => void] = useState("2021")
+
+  const years:string[] = Object.keys(props.data)
+
+
   return (
-    <p>I am GraphCard</p>
+    <section>
+      <GraphNavigation 
+        handler={setYearFilter}
+        years={years}
+        yearFilter={yearFilter}
+      />
+      <p>This is the graph card. It holds state, controlling graph navigation and chart display</p>
+    </section>
   )
 }
 

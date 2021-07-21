@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { GraphCard } from '../GraphCard/GraphCard';
 import './GraphCollection.css';
 
