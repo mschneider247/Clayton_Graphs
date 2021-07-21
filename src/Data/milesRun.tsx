@@ -1,5 +1,8 @@
 const milesRun = {
-  2017: {
+  years: ["2017", "2018", "2019", "2020", "2021"],
+  //          jan  feb  mar  apr  may  jun  jul  augsepoctnovdec
+  twentyOne: [123, 345, 783, 432, 534, 342, 150, 0, 0, 0, 0, 0,],
+  "2017": {
     jan: 8,
     feb: 11,
     mar: 13,
@@ -13,7 +16,7 @@ const milesRun = {
     nov: 24,
     dec: 19,
   },
-  2018: {
+  "2018": {
     jan: 12,
     feb: 21,
     mar: 103,
@@ -27,7 +30,7 @@ const milesRun = {
     nov: 204,
     dec: 169,
   },
-  2019: {
+  "2019": {
     jan: 123,
     feb: 215,
     mar: 133,
@@ -41,7 +44,7 @@ const milesRun = {
     nov: 293,
     dec: 114,
   },
-  2020: {
+  "2020": {
     jan: 123,
     feb: 345,
     mar: 183,
@@ -55,7 +58,7 @@ const milesRun = {
     nov: 693,
     dec: 214,
   },
-  2021 : {
+  "2021" : {
     jan: 123,
     feb: 345,
     mar: 783,

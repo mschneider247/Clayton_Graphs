@@ -1,4 +1,5 @@
 const subscriberCount = {
+  years: ["2019", "2020", "2021"],
   2019: {
     jan: 12,
     feb: 13,
@@ -11,7 +12,7 @@ const subscriberCount = {
     sep: 46,
     oct: 25,
     nov: 35,
-    dec: 46,
+    dec: 46
   },
   2020: {
     jan: 36,
@@ -25,7 +26,7 @@ const subscriberCount = {
     sep: 150,
     oct: 169,
     nov: 130,
-    dec: 149,
+    dec: 149
   },
   2021: {
     jan: 123,
@@ -39,8 +40,8 @@ const subscriberCount = {
     sep: 0,
     oct: 0,
     nov: 0,
-    dec: 0,
-  },
-}
+    dec: 0
+  }
+};
 
 export { subscriberCount }

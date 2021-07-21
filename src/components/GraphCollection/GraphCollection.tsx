@@ -1,11 +1,15 @@
 import { GraphCard } from '../GraphCard/GraphCard';
 import './GraphCollection.css';
 
+interface IData {
+  years: string[];
+}
+
 interface IGraph {
   id: number;
   name: string;
   type: string;
-  data: {};
+  data: IData;
 }
 
 interface IProps {

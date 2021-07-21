@@ -124,11 +124,15 @@ interface ICollectables {
   2021: IYearCollectable;
 }
 
+interface IData {
+  years: string[];
+}
+
 interface IGraph {
   id: number;
   name: string;
   type: string;
-  data: {};
+  data: IData;
 }
 
 const graphs:IGraph[] = [];

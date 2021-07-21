@@ -3,6 +3,7 @@ interface IProps {
   years: string[];
   yearFilter: string;
 }
+
 const GraphNavigation = (props: IProps) => {
   return (
     <nav>

@@ -1,4 +1,5 @@
 const angelInvestment = {
+  years: ["2020", "2021"],
   2020: {
     jan: 1,
     feb: 2,
@@ -11,7 +12,7 @@ const angelInvestment = {
     sep: 3,
     oct: 2,
     nov: 1,
-    dec: 5,
+    dec: 5
   },
   2021: {
     jan: 4,
@@ -25,8 +26,8 @@ const angelInvestment = {
     sep: 0,
     oct: 0,
     nov: 0,
-    dec: 0,
-  },
-}
+    dec: 0
+  }
+};
 
 export { angelInvestment }
