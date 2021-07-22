@@ -1,28 +1,20 @@
-import { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
-import { isPropertySignature } from "typescript";
-import "./Graph.css";
 
-interface IGraph {
-  id: number;
+interface Iprops {
   name: string;
-  type: string;
-  data: {};
+  data: number[];
 }
 
+const Graph = (props: Iprops) => {
 
-
-
-
-const Graph = (props:IGraph) => {
-  console.log(props.data)
+  const name = props.name;
 
   const data = {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     datasets: [
       {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
+        label: '# of ' + name + ' per month',
+        data: props.data,
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
@@ -45,7 +37,6 @@ const Graph = (props:IGraph) => {
   };
 
   const options = {
-    indexAxis: "y",
     elements: {
       bar: {
         borderWidth: 2
@@ -58,7 +49,7 @@ const Graph = (props:IGraph) => {
       },
       title: {
         display: true,
-        text: props.name
+        text: props.name,
       }
     }
   };

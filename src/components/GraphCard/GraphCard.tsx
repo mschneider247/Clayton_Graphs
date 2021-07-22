@@ -1,8 +1,15 @@
-import { useState } from 'react';
-import { GraphNavigation } from '../GraphNavigation/GraphNavigation'
+import { useState, useEffect } from 'react';
+import { Graph } from '../Graph/Graph';
+import { GraphNavigation } from '../GraphNavigation/GraphNavigation';
+
+interface ISingleYear {
+  id: number,
+  name: string,
+  data: number[],
+}
 
 interface IData {
-  years: string[];
+  years: ISingleYear[];
 }
 
 interface IGraph {
@@ -12,19 +19,25 @@ interface IGraph {
   data: IData;
 }
 
+const defaultYearData = [0];
+
 const GraphCard = (props:IGraph) => {
   console.log("This is graph:::", props.name)
-  console.log("Here we have props.data", props.data)
-  console.log("Can we get year uh no...")
-
-  console.log("Navigation should get ::", Object.keys(props.data))
 
   const [yearFilter, setYearFilter]: [string, (yearFilter: string) => void] = useState("2021")
 
-  const year:string = yearFilter
-  const years:string[] = props.data.years
+  const [yearData, setYearData]: [number[], (yearData: number[]) => void] = useState(defaultYearData)
 
+  const years:string[] = props.data.years.map((year) => {
+    return year.name
+  })
 
+  useEffect(() => {
+    const yearDataFilter: any = props.data.years.find(year => {
+      return year.name === yearFilter;
+    });
+    setYearData(yearDataFilter.data)
+  }, [])
 
   return (
     <section>
@@ -33,6 +46,10 @@ const GraphCard = (props:IGraph) => {
         handler={setYearFilter}
         years={years}
         yearFilter={yearFilter}
+      />
+      <Graph 
+        name={props.name}
+        data={yearData}
       />
     </section>
   )

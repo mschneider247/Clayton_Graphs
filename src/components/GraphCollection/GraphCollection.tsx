@@ -1,8 +1,14 @@
 import { GraphCard } from '../GraphCard/GraphCard';
 import './GraphCollection.css';
 
+interface ISingleData {
+  id: number,
+  name: string,
+  data: number[],
+}
+
 interface IData {
-  years: string[];
+  years: ISingleData[];
 }
 
 interface IGraph {
