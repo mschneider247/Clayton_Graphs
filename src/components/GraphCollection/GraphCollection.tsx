@@ -37,7 +37,7 @@ const GraphCollection = (props: IProps) => {
   })
 
   return (
-    <section>
+    <section className="graph_collection">
       {graphs}
     </section>
   )

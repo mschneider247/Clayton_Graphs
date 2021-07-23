@@ -1,47 +1,24 @@
 const subscriberCount = {
-  years: ["2019", "2020", "2021"],
-  2019: {
-    jan: 12,
-    feb: 13,
-    mar: 24,
-    apr: 25,
-    may: 53,
-    jun: 45,
-    jul: 68,
-    aug: 57,
-    sep: 46,
-    oct: 25,
-    nov: 35,
-    dec: 46
-  },
-  2020: {
-    jan: 36,
-    feb: 47,
-    mar: 57,
-    apr: 78,
-    may: 75,
-    jun: 123,
-    jul: 149,
-    aug: 129,
-    sep: 150,
-    oct: 169,
-    nov: 130,
-    dec: 149
-  },
-  2021: {
-    jan: 123,
-    feb: 114,
-    mar: 124,
-    apr: 143,
-    may: 165,
-    jun: 123,
-    jul: 149,
-    aug: 0,
-    sep: 0,
-    oct: 0,
-    nov: 0,
-    dec: 0
-  }
+  years: [
+    {
+      id: 2019,
+      name: "2019",
+      //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      data: [38, 41, 43, 33, 42, 52, 78, 50, 40, 78, 64, 59]
+    },
+    {
+      id: 2020,
+      name: "2020",
+      //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      data: [138, 141, 143, 133, 142, 252, 278, 250, 240, 378, 364, 359]
+    },
+    {
+      id: 2021,
+      name: "2021",
+      //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      data: [338, 341, 343, 333, 342, 452, 478, 0,   0,   0,   0,   0]
+    }
+  ]
 };
 
-export { subscriberCount }
+export { subscriberCount };

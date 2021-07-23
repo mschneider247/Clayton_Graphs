@@ -1,0 +1,8 @@
+.graph_card {
+  border: 1px solid var(--green);
+  border-radius: 3px;
+  margin: 1%;
+  padding: 1%;
+  text-align: center;
+  width: 500px;
+}
