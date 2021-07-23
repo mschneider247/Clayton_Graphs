@@ -1,4 +1,5 @@
 const collectables = {
+  years: ["2020", "2021"],
   2020: {
     jan: [
       {
@@ -34,7 +35,7 @@ const collectables = {
       {
         name: "Where the Brown Fern Groans",
         type: "comics"
-      },
+      }
     ],
     aug: [],
     sep: [],
@@ -49,13 +50,13 @@ const collectables = {
       }
     ],
     nov: [],
-    dec: [],
+    dec: []
   },
   2021: {
     jan: [
       {
         name: "Magic the Rupturing",
-        type: "cards",
+        type: "cards"
       },
       {
         name: "Gonzo's Galaxy",
@@ -95,8 +96,8 @@ const collectables = {
     sep: [],
     oct: [],
     nov: [],
-    dec: [],
-  },
-}   
+    dec: []
+  }
+};   
 
 export { collectables }

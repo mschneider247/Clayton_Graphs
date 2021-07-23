@@ -1,4 +1,5 @@
 const swingTrade = {
+  years: ["2020", "2021"],
   2020: {
     jan: [6, 3],
     feb: [8, 6],
@@ -11,7 +12,7 @@ const swingTrade = {
     sep: [2, 9],
     oct: [4, 1],
     nov: [8, 1],
-    dec: [2, 2],
+    dec: [2, 2]
   },
   2021: {
     jan: [12, 4],
@@ -25,8 +26,8 @@ const swingTrade = {
     sep: [],
     oct: [],
     nov: [],
-    dec: [],
-  },
-}
+    dec: []
+  }
+};
 
 export { swingTrade }

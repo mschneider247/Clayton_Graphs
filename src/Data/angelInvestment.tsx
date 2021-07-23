@@ -1,32 +1,18 @@
 const angelInvestment = {
-  2020: {
-    jan: 1,
-    feb: 2,
-    mar: 0,
-    apr: 3,
-    may: 5,
-    jun: 0,
-    jul: 1,
-    aug: 6,
-    sep: 3,
-    oct: 2,
-    nov: 1,
-    dec: 5,
-  },
-  2021: {
-    jan: 4,
-    feb: 1,
-    mar: 6,
-    apr: 5,
-    may: 2,
-    jun: 5,
-    jul: 1,
-    aug: 0,
-    sep: 0,
-    oct: 0,
-    nov: 0,
-    dec: 0,
-  },
-}
+  years: [
+    {
+      id: 2020,
+      name: "2020",
+      //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      data: [  4,  16,  14,  13,  14,  25,   2,   2,   2,   3,  36,  35]
+    },
+    {
+      id: 2021,
+      name: "2021",
+      //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      data: [ 38,  41,  43,  33,  56,  52,   5,   0,   0,   0,   0,   0]
+    }
+  ]
+};
 
-export { angelInvestment }
+export { angelInvestment };

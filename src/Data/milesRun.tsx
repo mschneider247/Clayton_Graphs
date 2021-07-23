@@ -1,74 +1,36 @@
 const milesRun = {
-  2017: {
-    jan: 8,
-    feb: 11,
-    mar: 13,
-    apr: 13,
-    may: 12,
-    jun: 12,
-    jul: 28,
-    aug: 20,
-    sep: 20,
-    oct: 18,
-    nov: 24,
-    dec: 19,
-  },
-  2018: {
-    jan: 12,
-    feb: 21,
-    mar: 103,
-    apr: 13,
-    may: 12,
-    jun: 32,
-    jul: 48,
-    aug: 30,
-    sep: 32,
-    oct: 180,
-    nov: 204,
-    dec: 169,
-  },
-  2019: {
-    jan: 123,
-    feb: 215,
-    mar: 133,
-    apr: 132,
-    may: 121,
-    jun: 312,
-    jul: 114,
-    aug: 123,
-    sep: 320,
-    oct: 234,
-    nov: 293,
-    dec: 114,
-  },
-  2020: {
-    jan: 123,
-    feb: 345,
-    mar: 183,
-    apr: 132,
-    may: 161,
-    jun: 342,
-    jul: 154,
-    aug: 123,
-    sep: 320,
-    oct: 234,
-    nov: 693,
-    dec: 214,
-  },
-  2021 : {
-    jan: 123,
-    feb: 345,
-    mar: 783,
-    apr: 432,
-    may: 534,
-    jun: 342,
-    jul: 150,
-    aug: 0,
-    sep: 0,
-    oct: 0,
-    nov: 0,
-    dec: 0,
-  },
+  years: [
+    {
+      id: 2017,
+      name: "2017",
+//           jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      data: [  8, 11,  13,  13,  12,  12,  28,  20,  20,  18,  24,  19]
+    },
+    {
+      id: 2018,
+      name: "2018",
+//           jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      data: [ 28, 31,  23,  23,  22,  22,  38,  30,  30,  38,  34,  39]
+    },
+    {
+      id: 2019,
+      name: "2019",
+//           jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      data: [ 38, 41,  43,  33,  42,  52,  78,  50,  40,  78,  64,  59]
+    },
+    {
+      id: 2020,
+      name: "2020",
+//           jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      data: [138, 141, 143, 133, 142, 252, 278, 250, 240, 378, 364, 359]
+    },
+    {
+      id: 2021,
+      name: "2021",
+//           jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      data: [338, 341, 343, 333, 342, 452, 478,   0,   0,   0,   0,   0]
+    },
+  ]
 }
 
 export { milesRun }
