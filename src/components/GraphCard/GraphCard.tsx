@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Graph } from '../Graph/Graph';
-import { GraphNavigation } from '../GraphNavigation/GraphNavigation';
+import { YearNavigation } from '../YearNavigation/YearNavigation';
+import './GraphCard.css'
 
 interface ISingleYear {
   id: number,
@@ -22,8 +23,6 @@ interface IGraph {
 const defaultYearData = [0];
 
 const GraphCard = (props:IGraph) => {
-  console.log("This is graph:::", props.name)
-
   const [yearFilter, setYearFilter]: [string, (yearFilter: string) => void] = useState("2021")
 
   const [yearData, setYearData]: [number[], (yearData: number[]) => void] = useState(defaultYearData)
@@ -45,16 +44,15 @@ const GraphCard = (props:IGraph) => {
 
   return (
     <section className="graph_card">
-      <p>This is the graph card. It holds state, controlling graph navigation and chart display</p>
-      <GraphNavigation 
+      <Graph 
+        name={props.name}
+        data={yearData}
+      />
+      <YearNavigation 
         handler={setYearFilter}
         years={years}
         yearFilter={yearFilter}
         updateData={updateYearData}
-      />
-      <Graph 
-        name={props.name}
-        data={yearData}
       />
     </section>
   )

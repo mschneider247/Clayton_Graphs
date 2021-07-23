@@ -1,4 +1,4 @@
-import './GraphNavigation.css'
+import './YearNavigation.css'
 
 interface IProps {
   handler: Function;
@@ -7,7 +7,7 @@ interface IProps {
   updateData: Function;
 }
 
-const GraphNavigation = (props: IProps) => {
+const YearNavigation = (props: IProps) => {
   return (
     <nav>
       {props.years.map((year, index) => {
@@ -29,4 +29,4 @@ const GraphNavigation = (props: IProps) => {
   )
 }
 
-export { GraphNavigation }
+export { YearNavigation }

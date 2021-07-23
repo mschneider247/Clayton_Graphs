@@ -1,3 +1,7 @@
 .graph_card {
-  width: 400px;
+  border: 1px solid var(--green);
+  border-radius: 3px;
+  margin: 1%;
+  text-align: center;
+  width: 500px;
 }
