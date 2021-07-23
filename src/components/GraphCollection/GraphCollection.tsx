@@ -38,7 +38,7 @@ const GraphCollection = (props: IProps) => {
 
   return (
     <section className="graph_collection">
-      {graphs}
+      {graphs.length ? graphs : <h2>No graphs found!</h2>}
     </section>
   )
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Header } from '../Header/Header'
-import { Filter } from '../Filter/Filter'
+import { FilterByType } from '../FilterByType/FilterByType'
 import { GraphCollection } from '../GraphCollection/GraphCollection'
 import './App.css';
 import { milesRun } from '../../Data/milesRun'
@@ -34,7 +34,21 @@ const App = () => {
 
   const [graphCollection, setGraphCollection]: [IGraph[], (graphs: IGraph[]) => void] = useState(graphs);
 
+  const [filteredCollection, setFilteredCollection]: [IGraph[], (graphs: IGraph[]) => void] = useState(graphCollection);
+
+  const [typeFilter, setTypeFilter]: [string, (loading: string) => void] = useState<string>("All");
+
   const [loading, setLoading]: [boolean, (loading: boolean) => void] = useState<boolean>(true);
+
+  const filterGraphsByType = (): IGraph[] => {
+    let filteredGraphs = graphCollection
+    if (typeFilter !== "All") {
+      filteredGraphs = filteredGraphs.filter(graph => {
+        return graph.type === typeFilter
+      })
+    }
+    return filteredGraphs
+  }
 
   useEffect(() => {
     let buildGraphs:IGraph[] = [
@@ -83,9 +97,14 @@ const App = () => {
   return (
     <main className="main_body">
       <Header />
-      <Filter />
+      <FilterByType 
+        handler={setTypeFilter}
+        typeFilter={typeFilter}
+      />
       {!loading &&
-        <GraphCollection graphs={graphCollection}/>
+        <GraphCollection 
+          graphs={filterGraphsByType()}
+        />
       }
     </main>
   );
