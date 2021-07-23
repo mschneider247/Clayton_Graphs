@@ -1,8 +1,16 @@
+:root {
+  --main-dark: #27201A;
+  --main-light: #CBBE8F;
+  --dark-green: #2C2D19;
+  --green: #68671A;
+  --ligh-green: #A8B163;
+}
+
 body {
+  background: var(--main-dark);
+  color: var(--main-light);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', 'Oxygen', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

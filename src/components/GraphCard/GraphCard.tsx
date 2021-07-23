@@ -44,7 +44,7 @@ const GraphCard = (props:IGraph) => {
   }, [])
 
   return (
-    <section>
+    <section className="graph_card">
       <p>This is the graph card. It holds state, controlling graph navigation and chart display</p>
       <GraphNavigation 
         handler={setYearFilter}

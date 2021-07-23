@@ -81,7 +81,7 @@ const App = () => {
   }, []);
 
   return (
-    <main>
+    <main className="main_body">
       <Header />
       <Filter />
       {!loading &&
