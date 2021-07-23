@@ -31,15 +31,16 @@ const GraphCard = (props:IGraph) => {
     return year.name
   })
 
-  const updateYearData = () => {
+  const updateYearData = (inputYear:string) => {
+    setYearFilter(inputYear);
     const yearDataFilter: any = props.data.years.find(year => {
-      return year.name === yearFilter;
+      return year.name === inputYear;
     });
     setYearData(yearDataFilter.data);
   }
 
   useEffect(() => {
-    updateYearData();
+    updateYearData("2021");
   }, [])
 
   return (
@@ -49,10 +50,9 @@ const GraphCard = (props:IGraph) => {
         data={yearData}
       />
       <YearNavigation 
-        handler={setYearFilter}
+        handler={updateYearData}
         years={years}
         yearFilter={yearFilter}
-        updateData={updateYearData}
       />
     </section>
   )

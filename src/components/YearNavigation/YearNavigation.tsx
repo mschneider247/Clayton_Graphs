@@ -4,7 +4,6 @@ interface IProps {
   handler: Function;
   years: string[];
   yearFilter: string;
-  updateData: Function;
 }
 
 const YearNavigation = (props: IProps) => {
@@ -19,7 +18,7 @@ const YearNavigation = (props: IProps) => {
           <button
             className={buttonClass}
             key={index}
-            onClick={() => (props.handler(year), (props.updateData()))}
+            onClick={() => props.handler(year)}
           >
             {year}
           </button>
