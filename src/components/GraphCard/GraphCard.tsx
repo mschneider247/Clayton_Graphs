@@ -32,11 +32,15 @@ const GraphCard = (props:IGraph) => {
     return year.name
   })
 
-  useEffect(() => {
+  const updateYearData = () => {
     const yearDataFilter: any = props.data.years.find(year => {
       return year.name === yearFilter;
     });
-    setYearData(yearDataFilter.data)
+    setYearData(yearDataFilter.data);
+  }
+
+  useEffect(() => {
+    updateYearData();
   }, [])
 
   return (
@@ -46,6 +50,7 @@ const GraphCard = (props:IGraph) => {
         handler={setYearFilter}
         years={years}
         yearFilter={yearFilter}
+        updateData={updateYearData}
       />
       <Graph 
         name={props.name}

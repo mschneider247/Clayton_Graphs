@@ -2,6 +2,7 @@ interface IProps {
   handler: Function;
   years: string[];
   yearFilter: string;
+  updateData: Function;
 }
 
 const GraphNavigation = (props: IProps) => {
@@ -11,7 +12,7 @@ const GraphNavigation = (props: IProps) => {
         return (
           <button
             key={index}
-            onClick={() => props.handler(year)}
+            onClick={() => (props.handler(year), (props.updateData()))}
           >
             {year}
           </button>
