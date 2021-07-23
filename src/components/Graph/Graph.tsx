@@ -44,6 +44,10 @@ const Graph = (props: Iprops) => {
     },
     responsive: true,
     plugins: {
+      legend: {
+        display: false,
+        position: ""
+      },
       title: {
         display: true,
         text: props.name,

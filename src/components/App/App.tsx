@@ -4,7 +4,7 @@ import { Filter } from '../Filter/Filter'
 import { GraphCollection } from '../GraphCollection/GraphCollection'
 import './App.css';
 import { milesRun } from '../../Data/milesRun'
-// import { subscriberCount } from '../../Data/subscriberCount'
+import { subscriberCount } from '../../Data/subscriberCount'
 // import { altAssetChallenge } from '../../Data/altAssetChallenge'
 import { angelInvestment } from '../../Data/angelInvestment'
 // import { swingTrade } from '../../Data/swingTrade'
@@ -44,12 +44,12 @@ const App = () => {
         type: "Fitness",
         data: milesRun
       },
-      // {
-      //   id: 2,
-      //   name: "Subscriber Count",
-      //   type: "Subscribers",
-      //   data: subscriberCount,
-      // },
+      {
+        id: 2,
+        name: "Subscriber Count",
+        type: "Subscribers",
+        data: subscriberCount,
+      },
       // {
       //   id: 3,
       //   name: "Alternative Asset Bankroll Challenge",
