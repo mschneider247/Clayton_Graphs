@@ -3,7 +3,11 @@
   --main-light: #CBBE8F;
   --dark-green: #2C2D19;
   --green: #68671A;
-  --ligh-green: #A8B163;
+  --light-green: #A8B163;
+  --orange: #DF4239;
+  --light-orange: #F99D5c;
+  --yellow: #EEAE3c;
+  --light-yellow: #E2BD64;
 }
 
 body {

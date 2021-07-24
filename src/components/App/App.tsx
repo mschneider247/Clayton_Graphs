@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Header } from '../Header/Header'
 import { FilterByType } from '../FilterByType/FilterByType'
 import { GraphCollection } from '../GraphCollection/GraphCollection'
+import { Footer } from '../Footer/Footer'
 import './App.css';
 import { milesRun } from '../../Data/milesRun'
 import { subscriberCount } from '../../Data/subscriberCount'
@@ -106,6 +107,7 @@ const App = () => {
           graphs={filterGraphsByType()}
         />
       }
+      <Footer />
     </main>
   );
 }
