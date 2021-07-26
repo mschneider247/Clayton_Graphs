@@ -15,6 +15,7 @@ interface ISingleYear {
   id: number,
   name: string,
   data: number[],
+  data2?: number[],
 }
 
 interface IData {
@@ -35,6 +36,8 @@ const GraphCard = (props:IGraph) => {
   const [yearFilter, setYearFilter]: [string, (yearFilter: string) => void] = useState("2021")
 
   const [yearData, setYearData]: [number[], (yearData: number[]) => void] = useState(defaultYearData)
+  const [yearData2, setYearData2]: [number[], (yearData2: number[]) => void] = useState(defaultYearData)
+
 
   const years:string[] = props.data.years.map((year) => {
     return year.name
@@ -46,6 +49,7 @@ const GraphCard = (props:IGraph) => {
       return year.name === inputYear;
     });
     setYearData(yearDataFilter.data);
+    setYearData2(yearDataFilter.data2);
   }
 
   useEffect(() => {
@@ -63,12 +67,20 @@ const GraphCard = (props:IGraph) => {
         />
       }
       {props.name === "Subscriber Count" && 
-        <BarGraph
-          name={props.name}
-          type={props.type}
-          style={props.data.style}
-          data={yearData}
-        />
+        <>
+          <LineGraph
+            name="Total Subscribers"
+            type={props.type}
+            style={props.data.style}
+            data={yearData2}
+          />
+          <BarGraph
+            name="New Subscribers"
+            type={props.type}
+            style={props.data.style}
+            data={yearData}
+          />
+        </>
       }
       {props.name === "Angel Investments" && 
         <BarGraph

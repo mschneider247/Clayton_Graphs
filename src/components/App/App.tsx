@@ -12,10 +12,11 @@ import { angelInvestment } from '../../Data/angelInvestment'
 // import { collectables } from '../../Data/collectables'
 
 
-interface ISingleData {
+interface ISingleYear {
   id: number,
   name: string,
   data: number[],
+  data2?: number[],
 }
 
 interface IStyle {
@@ -27,7 +28,7 @@ interface IStyle {
 
 interface IData {
   style: IStyle,
-  years: ISingleData[];
+  years: ISingleYear[];
 }
 
 interface IGraph {

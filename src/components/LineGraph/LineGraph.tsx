@@ -52,11 +52,12 @@ const LineGraph = (props: Iprops) => {
       },
       y: {
         ticks: {
+          beginAtZero: true,
           color: props.style.secondLight,
-          stepSize: 10,
+          stepSize: 50,
           font: {
             size: 14
-          }
+          },
         }
       }
     },

@@ -8,15 +8,16 @@ interface IStyle {
   secondLight: string
 }
 
-interface ISingleData {
+interface ISingleYear {
   id: number,
   name: string,
   data: number[],
+  data2?: number[],
 }
 
 interface IData {
   style: IStyle,
-  years: ISingleData[];
+  years: ISingleYear[];
 }
 
 interface IGraph {
