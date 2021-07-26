@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BarGraph } from '../BarGraph/BarGraph';
+import { LineGraph } from '../LineGraph/LineGraph';
 import { YearNavigation } from '../YearNavigation/YearNavigation';
 import './GraphCard.css'
 
@@ -53,19 +54,37 @@ const GraphCard = (props:IGraph) => {
 
   return (
     <section className="graph_card">
-      <BarGraph 
-        name={props.name}
-        type={props.type}
-        style={props.data.style}
-        data={yearData}
-      />
-      <YearNavigation 
+      {props.name === "Miles Run" && 
+        <LineGraph
+          name={props.name}
+          type={props.type}
+          style={props.data.style}
+          data={yearData}
+        />
+      }
+      {props.name === "Subscriber Count" && 
+        <BarGraph
+          name={props.name}
+          type={props.type}
+          style={props.data.style}
+          data={yearData}
+        />
+      }
+      {props.name === "Angel Investments" && 
+        <BarGraph
+          name={props.name}
+          type={props.type}
+          style={props.data.style}
+          data={yearData}
+        />
+      }
+      <YearNavigation
         handler={updateYearData}
         years={years}
         yearFilter={yearFilter}
       />
     </section>
-  )
+  );
 }
 
 export { GraphCard }
