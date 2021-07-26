@@ -1,4 +1,10 @@
 const milesRun = {
+  style: {
+    mainDark: "#27201A",
+    mainLight: "#CBBE8F",
+    secondDark: "#68671A",
+    secondLight: "#A8B163"
+  },
   years: [
     {
       id: 2017,

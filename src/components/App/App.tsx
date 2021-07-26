@@ -18,7 +18,15 @@ interface ISingleData {
   data: number[],
 }
 
+interface IStyle {
+  mainDark: string,
+  mainLight: string,
+  secondDark: string,
+  secondLight: string
+}
+
 interface IData {
+  style: IStyle,
   years: ISingleData[];
 }
 
@@ -34,8 +42,6 @@ const graphs:IGraph[] = [];
 const App = () => {
 
   const [graphCollection, setGraphCollection]: [IGraph[], (graphs: IGraph[]) => void] = useState(graphs);
-
-  const [filteredCollection, setFilteredCollection]: [IGraph[], (graphs: IGraph[]) => void] = useState(graphCollection);
 
   const [typeFilter, setTypeFilter]: [string, (loading: string) => void] = useState<string>("All");
 

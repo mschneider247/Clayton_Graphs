@@ -1,4 +1,10 @@
 const subscriberCount = {
+  style: {
+    mainDark: "#27201A",
+    mainLight: "#CBBE8F",
+    secondDark: "#EEAE3C",
+    secondLight: "#E2BD64"
+  },
   years: [
     {
       id: 2019,
@@ -16,7 +22,7 @@ const subscriberCount = {
       id: 2021,
       name: "2021",
       //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
-      data: [338, 341, 343, 333, 342, 452, 478, 0,   0,   0,   0,   0]
+      data: [338, 341, 343, 333, 342, 452, 478, 0, 0, 0, 0, 0]
     }
   ]
 };

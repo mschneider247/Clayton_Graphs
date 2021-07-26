@@ -3,6 +3,13 @@ import { BarGraph } from '../BarGraph/BarGraph';
 import { YearNavigation } from '../YearNavigation/YearNavigation';
 import './GraphCard.css'
 
+interface IStyle {
+  mainDark: string,
+  mainLight: string,
+  secondDark: string,
+  secondLight: string
+}
+
 interface ISingleYear {
   id: number,
   name: string,
@@ -10,6 +17,7 @@ interface ISingleYear {
 }
 
 interface IData {
+  style: IStyle,
   years: ISingleYear[];
 }
 
@@ -48,6 +56,7 @@ const GraphCard = (props:IGraph) => {
       <BarGraph 
         name={props.name}
         type={props.type}
+        style={props.data.style}
         data={yearData}
       />
       <YearNavigation 

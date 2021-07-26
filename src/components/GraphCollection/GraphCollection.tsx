@@ -1,6 +1,13 @@
 import { GraphCard } from '../GraphCard/GraphCard';
 import './GraphCollection.css';
 
+interface IStyle {
+  mainDark: string,
+  mainLight: string,
+  secondDark: string,
+  secondLight: string
+}
+
 interface ISingleData {
   id: number,
   name: string,
@@ -8,6 +15,7 @@ interface ISingleData {
 }
 
 interface IData {
+  style: IStyle,
   years: ISingleData[];
 }
 
