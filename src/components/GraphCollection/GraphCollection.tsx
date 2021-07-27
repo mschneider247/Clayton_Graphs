@@ -5,7 +5,9 @@ interface IStyle {
   mainDark: string,
   mainLight: string,
   secondDark: string,
-  secondLight: string
+  secondLight: string,
+  thirdDark: string,
+  thirdLight: string,
 }
 
 interface ISingleYear {

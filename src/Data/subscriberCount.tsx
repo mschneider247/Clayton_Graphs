@@ -3,7 +3,9 @@ const subscriberCount = {
     mainDark: "#27201A",
     mainLight: "#CBBE8F",
     secondDark: "#EEAE3C",
-    secondLight: "#E2BD64"
+    secondLight: "#E2BD64",
+    thirdDark: "#DF4239",
+    thirdLight: "#F99D5C",
   },
   years: [
     {

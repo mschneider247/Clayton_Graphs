@@ -3,7 +3,9 @@ const milesRun = {
     mainDark: "#27201A",
     mainLight: "#CBBE8F",
     secondDark: "#68671A",
-    secondLight: "#A8B163"
+    secondLight: "#A8B163",
+    thirdDark: "#68671A",
+    thirdLight: "#A8B163"
   },
   years: [
     {

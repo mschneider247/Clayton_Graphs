@@ -4,30 +4,52 @@ interface IStyle {
   mainDark: string,
   mainLight: string,
   secondDark: string,
-  secondLight: string
+  secondLight: string,
+  thirdDark: string,
+  thirdLight: string,
 }
 
 interface Iprops {
   style: IStyle,
   name: string;
   data: number[];
+  data2?: number[];
   type: string;
 }
 
-const BarGraph = (props: Iprops) => {
-
-  const name = props.name;
-
+const BarLineGraph = (props: Iprops) => {
+  
   const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
     datasets: [
       {
-        label: '# of ' + name + ' per month',
+        label: "Total subs",
+        type: "line",
+        data: props.data2,
+        backgroundColor: props.style.thirdDark,
+        borderColor: props.style.thirdLight,
+        borderWidth: 1
+      },
+      {
+        label: "New subs",
         data: props.data,
         backgroundColor: props.style.secondDark,
         borderColor: props.style.secondLight,
         borderWidth: 1
-      }
+      },
     ]
   };
 
@@ -56,8 +78,8 @@ const BarGraph = (props: Iprops) => {
     responsive: true,
     plugins: {
       legend: {
-        display: false,
-        position: ""
+        display: true,
+        position: "right"
       },
       title: {
         display: true,
@@ -80,4 +102,4 @@ const BarGraph = (props: Iprops) => {
   )
 }
 
-export { BarGraph }
+export { BarLineGraph }

@@ -3,7 +3,9 @@ const angelInvestment = {
     mainDark: "#27201A",
     mainLight: "#CBBE8F",
     secondDark: "#DF4239",
-    secondLight: "#F99D5C"
+    secondLight: "#F99D5C",
+    thirdDark: "#DF4239",
+    thirdLight: "#F99D5C"
   },
   years: [
     {

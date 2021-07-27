@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BarGraph } from '../BarGraph/BarGraph';
+import { BarLineGraph } from '../BarLineGraph/BarLineGraph';
 import { LineGraph } from '../LineGraph/LineGraph';
 import { YearNavigation } from '../YearNavigation/YearNavigation';
 import './GraphCard.css'
@@ -8,7 +8,9 @@ interface IStyle {
   mainDark: string,
   mainLight: string,
   secondDark: string,
-  secondLight: string
+  secondLight: string,
+  thirdDark: string,
+  thirdLight: string,
 }
 
 interface ISingleYear {
@@ -67,23 +69,16 @@ const GraphCard = (props:IGraph) => {
         />
       }
       {props.name === "Subscriber Count" && 
-        <>
-          <LineGraph
-            name="Total Subscribers"
-            type={props.type}
-            style={props.data.style}
-            data={yearData2}
-          />
-          <BarGraph
-            name="New Subscribers"
-            type={props.type}
-            style={props.data.style}
-            data={yearData}
-          />
-        </>
+        <BarLineGraph
+          name="Subscribers"
+          type={props.type}
+          style={props.data.style}
+          data={yearData}
+          data2={yearData2}
+        />
       }
       {props.name === "Angel Investments" && 
-        <BarGraph
+        <LineGraph
           name={props.name}
           type={props.type}
           style={props.data.style}
