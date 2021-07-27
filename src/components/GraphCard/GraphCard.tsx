@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { BarLineGraph } from '../BarLineGraph/BarLineGraph';
 import { LineGraph } from '../LineGraph/LineGraph';
+import { BarLineGraph } from '../BarLineGraph/BarLineGraph';
+import { StackedBarGraph } from '../StackedBarGraph/StackedBarGraph';
 import { YearNavigation } from '../YearNavigation/YearNavigation';
 import './GraphCard.css'
 
@@ -60,31 +61,40 @@ const GraphCard = (props:IGraph) => {
 
   return (
     <section className="graph_card">
-      {props.name === "Miles Run" && 
+      {props.name === "Miles Run" && (
         <LineGraph
-          name={props.name}
+          name="Miles Run per month"
           type={props.type}
           style={props.data.style}
           data={yearData}
         />
-      }
-      {props.name === "Subscriber Count" && 
+      )}
+      {props.name === "Subscriber Count" && (
         <BarLineGraph
-          name="Subscribers"
+          name="Substack Subscribers"
           type={props.type}
           style={props.data.style}
           data={yearData}
           data2={yearData2}
         />
-      }
-      {props.name === "Angel Investments" && 
+      )}
+      {props.name === "Angel Investments" && (
         <LineGraph
           name={props.name}
           type={props.type}
           style={props.data.style}
           data={yearData}
         />
-      }
+      )}
+      {props.name === "Swing Trades" && (
+        <StackedBarGraph
+          name={props.name}
+          type={props.type}
+          style={props.data.style}
+          data={yearData}
+          data2={yearData2}
+        />
+      )}
       <YearNavigation
         handler={updateYearData}
         years={years}

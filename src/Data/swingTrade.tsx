@@ -1,33 +1,32 @@
 const swingTrade = {
-  years: ["2020", "2021"],
-  2020: {
-    jan: [6, 3],
-    feb: [8, 6],
-    mar: [3, 4],
-    apr: [6, 1],
-    may: [4, 8],
-    jun: [9, 3],
-    jul: [4, 5],
-    aug: [2, 5],
-    sep: [2, 9],
-    oct: [4, 1],
-    nov: [8, 1],
-    dec: [2, 2]
+  style: {
+    mainDark: "#27201A",
+    mainLight: "#CBBE8F",
+    secondDark: "#68671A",
+    secondLight: "#A8B163",
+    thirdDark: "#DF4239",
+    thirdLight: "#F99D5C"
   },
-  2021: {
-    jan: [12, 4],
-    feb: [6, 5],
-    mar: [1, 4],
-    apr: [2, 7],
-    may: [5, 4],
-    jun: [5, 6],
-    jul: [7, 3],
-    aug: [],
-    sep: [],
-    oct: [],
-    nov: [],
-    dec: []
-  }
+  years: [
+    {
+      id: 2020,
+      name: "2020",
+      //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      //     winning trades
+      data: [4, 2, 4, 3, 2, 0, 7, 5, 13, 1, 4, 9],
+      //     losing trades
+      data2: [-4, -3, -1, -1, 0, -7, -4, -2, 0, -4, -8, -7]
+    },
+    {
+      id: 2021,
+      name: "2021",
+      //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
+      //     winning trades
+      data: [8, 4, 3, 1, 0, 10, 4],
+      //     loosing trades
+      data2: [-1, 0, -1, -6, -2, -4]
+    }
+  ]
 };
 
 export { swingTrade }
