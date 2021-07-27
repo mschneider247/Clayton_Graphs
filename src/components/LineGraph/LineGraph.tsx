@@ -73,7 +73,7 @@ const LineGraph = (props: Iprops) => {
         position: ""
       },
       title: {
-        display: true,
+        display: false,
         color: props.style.mainLight,
         text: props.name,
         font: {
@@ -85,6 +85,7 @@ const LineGraph = (props: Iprops) => {
 
   return (
     <article>
+      <h3>Miles Run</h3>
       <Line data={data} options={options} />
     </article>
   );

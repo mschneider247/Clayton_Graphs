@@ -79,10 +79,10 @@ const StackedBarGraph = (props: Iprops) => {
     plugins: {
       legend: {
         display: true,
-        position: "right"
+        position: "bottom"
       },
       title: {
-        display: true,
+        display: false,
         color: props.style.mainLight,
         text: props.name,
         font: {
@@ -94,6 +94,7 @@ const StackedBarGraph = (props: Iprops) => {
 
   return (
     <article>
+      <h3>Swing Trades</h3>
       <Bar data={data} options={options} />
     </article>
   );

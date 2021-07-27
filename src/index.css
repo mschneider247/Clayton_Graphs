@@ -8,6 +8,8 @@
   --light-orange: #F99D5c;
   --yellow: #EEAE3c;
   --light-yellow: #E2BD64;
+  --magenta: #891a52;
+  --light-magenta: #B44058;
 }
 
 body {
@@ -17,6 +19,10 @@ body {
   font-family: 'Roboto', 'Oxygen', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+canvas {
+  margin: 20px 0;
 }
 
 code {
