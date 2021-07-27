@@ -34,7 +34,7 @@ const LineGraph = (props: Iprops) => {
     ],
     datasets: [
       {
-        label: "# of " + name + " per month",
+        label: name,
         data: props.data,
         backgroundColor: props.style.secondDark,
         borderColor: props.style.secondLight,
@@ -69,11 +69,11 @@ const LineGraph = (props: Iprops) => {
     responsive: true,
     plugins: {
       legend: {
-        display: false,
-        position: ""
+        display: true,
+        position: "bottom"
       },
       title: {
-        display: true,
+        display: false,
         color: props.style.mainLight,
         text: props.name,
         font: {
@@ -85,6 +85,7 @@ const LineGraph = (props: Iprops) => {
 
   return (
     <article>
+      <h3>Miles Run</h3>
       <Line data={data} options={options} />
     </article>
   );

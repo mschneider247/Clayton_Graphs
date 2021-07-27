@@ -1,9 +1,12 @@
 .graph_card {
   border: 1px solid var(--dark-green);
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  justify-content: space-between;
   margin: 1%;
   padding: 1%;
   text-align: center;
-  width: 460px;
-  height: 100%;
+  width: 500px;
 }

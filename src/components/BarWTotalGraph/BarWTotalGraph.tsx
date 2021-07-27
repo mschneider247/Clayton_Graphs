@@ -1,24 +1,24 @@
 import { Bar } from "react-chartjs-2";
+import "./BarWTotalGraph.css";
 
 interface IStyle {
-  mainDark: string,
-  mainLight: string,
-  secondDark: string,
-  secondLight: string,
-  thirdDark: string,
-  thirdLight: string,
+  mainDark: string;
+  mainLight: string;
+  secondDark: string;
+  secondLight: string;
+  thirdDark: string;
+  thirdLight: string;
 }
 
 interface Iprops {
-  style: IStyle,
+  style: IStyle;
   name: string;
   data: number[];
   data2?: number[];
   type: string;
 }
 
-const BarLineGraph = (props: Iprops) => {
-  
+const BarWTotalGraph = (props: Iprops) => {
   const data = {
     labels: [
       "Jan",
@@ -36,20 +36,12 @@ const BarLineGraph = (props: Iprops) => {
     ],
     datasets: [
       {
-        label: "Total subs",
-        type: "line",
-        data: props.data2,
-        backgroundColor: props.style.thirdDark,
-        borderColor: props.style.thirdLight,
-        borderWidth: 1
-      },
-      {
-        label: "New subs",
+        label: "Angel Investments",
         data: props.data,
         backgroundColor: props.style.secondDark,
         borderColor: props.style.secondLight,
         borderWidth: 1
-      },
+      }
     ]
   };
 
@@ -65,7 +57,7 @@ const BarLineGraph = (props: Iprops) => {
           color: props.style.secondLight,
           stepSize: 10,
           font: {
-            size: 14,
+            size: 14
           }
         }
       }
@@ -84,23 +76,32 @@ const BarLineGraph = (props: Iprops) => {
       title: {
         display: false,
         color: props.style.mainLight,
-        text: props.name,
+        text: "",
         font: {
-          size: 18,
+          size: 16
         }
       }
     }
   };
 
+  const returnYearTotal = () => {
+    let total = 0;
+    props.data2?.forEach(number => {
+      total += number;
+    });
+    return total;
+  };
+
   return (
     <article>
-      <h3>Substack Subscribers</h3>
-      <Bar
-        data={data}
-        options={options}  
-      />
+      <h3>Angel Investments</h3>
+      <Bar data={data} options={options} />
+      <h3>
+        {props.name + " total: "}
+        <span className="year_total">{returnYearTotal()}</span>
+      </h3>
     </article>
-  )
-}
+  );
+};
 
-export { BarLineGraph }
+export { BarWTotalGraph };

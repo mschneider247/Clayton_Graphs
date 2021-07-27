@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { LineGraph } from '../LineGraph/LineGraph';
 import { BarLineGraph } from '../BarLineGraph/BarLineGraph';
 import { StackedBarGraph } from '../StackedBarGraph/StackedBarGraph';
+import { BarWTotalGraph } from "../BarWTotalGraph/BarWTotalGraph";
 import { YearNavigation } from '../YearNavigation/YearNavigation';
 import './GraphCard.css'
 
@@ -63,7 +64,7 @@ const GraphCard = (props:IGraph) => {
     <section className="graph_card">
       {props.name === "Miles Run" && (
         <LineGraph
-          name="Miles Run per month"
+          name={props.name}
           type={props.type}
           style={props.data.style}
           data={yearData}
@@ -79,11 +80,12 @@ const GraphCard = (props:IGraph) => {
         />
       )}
       {props.name === "Angel Investments" && (
-        <LineGraph
-          name={props.name}
+        <BarWTotalGraph
+          name={yearFilter}
           type={props.type}
           style={props.data.style}
           data={yearData}
+          data2={yearData2}
         />
       )}
       {props.name === "Swing Trades" && (
