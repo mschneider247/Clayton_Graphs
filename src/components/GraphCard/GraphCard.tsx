@@ -64,7 +64,7 @@ const GraphCard = (props:IGraph) => {
     <section className="graph_card">
       {props.name === "Miles Run" && (
         <LineGraph
-          name="Miles Run per month"
+          name={props.name}
           type={props.type}
           style={props.data.style}
           data={yearData}

@@ -36,7 +36,7 @@ const BarWTotalGraph = (props: Iprops) => {
     ],
     datasets: [
       {
-        label: "Investments per month",
+        label: "Angel Investments",
         data: props.data,
         backgroundColor: props.style.secondDark,
         borderColor: props.style.secondLight,
@@ -70,8 +70,8 @@ const BarWTotalGraph = (props: Iprops) => {
     responsive: true,
     plugins: {
       legend: {
-        display: false,
-        position: "right"
+        display: true,
+        position: "bottom"
       },
       title: {
         display: false,

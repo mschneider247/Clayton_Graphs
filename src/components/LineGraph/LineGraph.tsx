@@ -34,7 +34,7 @@ const LineGraph = (props: Iprops) => {
     ],
     datasets: [
       {
-        label: "# of " + name + " per month",
+        label: name,
         data: props.data,
         backgroundColor: props.style.secondDark,
         borderColor: props.style.secondLight,
@@ -69,8 +69,8 @@ const LineGraph = (props: Iprops) => {
     responsive: true,
     plugins: {
       legend: {
-        display: false,
-        position: ""
+        display: true,
+        position: "bottom"
       },
       title: {
         display: false,
