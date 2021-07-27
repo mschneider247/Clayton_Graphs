@@ -9,7 +9,7 @@ const FilterByType = (props: Iprops) => {
 
   const categories: string[] = ["All", "Subscribers", "Investments", "Collectables", "Fitness"]
   return (
-    <section>
+    <section className="filter_by_type">
       {categories.map((category, index) => {
         let buttonClass = "filter_button";
         if (category === props.typeFilter) {

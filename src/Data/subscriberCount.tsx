@@ -31,9 +31,9 @@ const subscriberCount = {
       name: "2021",
       //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
       //     New subscribers
-      data: [8, 3, 3, 3, 8, 12, 4, 0, 0, 0, 0, 0],
+      data: [8, 3, 3, 3, 8, 12, 4],
       //     Total subscribers
-      data2: [235, 238, 241, 244, 252, 264, 268, 268, 268, 268, 268, 268]
+      data2: [235, 238, 241, 244, 252, 264, 268]
     }
   ]
 };

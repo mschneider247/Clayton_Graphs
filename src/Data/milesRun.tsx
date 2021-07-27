@@ -36,7 +36,7 @@ const milesRun = {
       id: 2021,
       name: "2021",
 //           jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
-      data: [238, 241, 243, 233, 242, 252, 278,   0,   0,   0,   0,   0]
+      data: [238, 241, 243, 233, 242, 252, 278]
     },
   ]
 }

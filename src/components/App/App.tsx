@@ -8,7 +8,7 @@ import { milesRun } from '../../Data/milesRun'
 import { subscriberCount } from '../../Data/subscriberCount'
 // import { altAssetChallenge } from '../../Data/altAssetChallenge'
 import { angelInvestment } from '../../Data/angelInvestment'
-// import { swingTrade } from '../../Data/swingTrade'
+import { swingTrade } from '../../Data/swingTrade'
 // import { collectables } from '../../Data/collectables'
 
 
@@ -86,12 +86,12 @@ const App = () => {
         type: "Investments",
         data: angelInvestment,
       },
-      // {
-      //   id: 5,
-      //   name: "Swing Trades",
-      //   type: "Investments",
-      //   data: swingTrade,
-      // },
+      {
+        id: 5,
+        name: "Swing Trades",
+        type: "Investments",
+        data: swingTrade,
+      },
       // {
       //   id: 6,
       //   name: "Collectables",
