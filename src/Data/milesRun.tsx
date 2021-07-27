@@ -1,4 +1,12 @@
 const milesRun = {
+  style: {
+    mainDark: "#27201A",
+    mainLight: "#CBBE8F",
+    secondDark: "#68671A",
+    secondLight: "#A8B163",
+    thirdDark: "#68671A",
+    thirdLight: "#A8B163"
+  },
   years: [
     {
       id: 2017,
@@ -22,13 +30,13 @@ const milesRun = {
       id: 2020,
       name: "2020",
 //           jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
-      data: [138, 141, 143, 133, 142, 252, 278, 250, 240, 378, 364, 359]
+      data: [138, 141, 143, 133, 142, 152, 178, 150, 140, 178, 184, 201]
     },
     {
       id: 2021,
       name: "2021",
 //           jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
-      data: [338, 341, 343, 333, 342, 452, 478,   0,   0,   0,   0,   0]
+      data: [238, 241, 243, 233, 242, 252, 278,   0,   0,   0,   0,   0]
     },
   ]
 }

@@ -1,16 +1,24 @@
 const angelInvestment = {
+  style: {
+    mainDark: "#27201A",
+    mainLight: "#CBBE8F",
+    secondDark: "#DF4239",
+    secondLight: "#F99D5C",
+    thirdDark: "#DF4239",
+    thirdLight: "#F99D5C"
+  },
   years: [
     {
       id: 2020,
       name: "2020",
       //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
-      data: [  4,  16,  14,  13,  14,  25,   2,   2,   2,   3,  36,  35]
+      data: [4, 16, 14, 13, 14, 25, 2, 2, 2, 3, 36, 35]
     },
     {
       id: 2021,
       name: "2021",
       //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
-      data: [ 38,  41,  43,  33,  56,  52,   5,   0,   0,   0,   0,   0]
+      data: [38, 41, 43, 33, 56, 52, 5, 0, 0, 0, 0, 0]
     }
   ]
 };

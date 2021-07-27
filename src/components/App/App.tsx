@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Header } from '../Header/Header'
-import { Filter } from '../Filter/Filter'
+import { FilterByType } from '../FilterByType/FilterByType'
 import { GraphCollection } from '../GraphCollection/GraphCollection'
+import { Footer } from '../Footer/Footer'
 import './App.css';
 import { milesRun } from '../../Data/milesRun'
 import { subscriberCount } from '../../Data/subscriberCount'
@@ -11,14 +12,25 @@ import { angelInvestment } from '../../Data/angelInvestment'
 // import { collectables } from '../../Data/collectables'
 
 
-interface ISingleData {
+interface ISingleYear {
   id: number,
   name: string,
   data: number[],
+  data2?: number[],
+}
+
+interface IStyle {
+  mainDark: string,
+  mainLight: string,
+  secondDark: string,
+  secondLight: string,
+  thirdDark: string,
+  thirdLight: string,
 }
 
 interface IData {
-  years: ISingleData[];
+  style: IStyle,
+  years: ISingleYear[];
 }
 
 interface IGraph {
@@ -34,7 +46,19 @@ const App = () => {
 
   const [graphCollection, setGraphCollection]: [IGraph[], (graphs: IGraph[]) => void] = useState(graphs);
 
+  const [typeFilter, setTypeFilter]: [string, (loading: string) => void] = useState<string>("All");
+
   const [loading, setLoading]: [boolean, (loading: boolean) => void] = useState<boolean>(true);
+
+  const filterGraphsByType = (): IGraph[] => {
+    let filteredGraphs = graphCollection
+    if (typeFilter !== "All") {
+      filteredGraphs = filteredGraphs.filter(graph => {
+        return graph.type === typeFilter
+      })
+    }
+    return filteredGraphs
+  }
 
   useEffect(() => {
     let buildGraphs:IGraph[] = [
@@ -83,10 +107,16 @@ const App = () => {
   return (
     <main className="main_body">
       <Header />
-      <Filter />
+      <FilterByType 
+        handler={setTypeFilter}
+        typeFilter={typeFilter}
+      />
       {!loading &&
-        <GraphCollection graphs={graphCollection}/>
+        <GraphCollection 
+          graphs={filterGraphsByType()}
+        />
       }
+      <Footer />
     </main>
   );
 }

@@ -1,14 +1,25 @@
 import { GraphCard } from '../GraphCard/GraphCard';
 import './GraphCollection.css';
 
-interface ISingleData {
+interface IStyle {
+  mainDark: string,
+  mainLight: string,
+  secondDark: string,
+  secondLight: string,
+  thirdDark: string,
+  thirdLight: string,
+}
+
+interface ISingleYear {
   id: number,
   name: string,
   data: number[],
+  data2?: number[],
 }
 
 interface IData {
-  years: ISingleData[];
+  style: IStyle,
+  years: ISingleYear[];
 }
 
 interface IGraph {
@@ -38,7 +49,7 @@ const GraphCollection = (props: IProps) => {
 
   return (
     <section className="graph_collection">
-      {graphs}
+      {graphs.length ? graphs : <h2>No graphs found!</h2>}
     </section>
   )
 }

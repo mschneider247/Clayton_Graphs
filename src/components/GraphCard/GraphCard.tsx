@@ -1,15 +1,27 @@
 import { useState, useEffect } from 'react';
-import { Graph } from '../Graph/Graph';
+import { BarLineGraph } from '../BarLineGraph/BarLineGraph';
+import { LineGraph } from '../LineGraph/LineGraph';
 import { YearNavigation } from '../YearNavigation/YearNavigation';
 import './GraphCard.css'
+
+interface IStyle {
+  mainDark: string,
+  mainLight: string,
+  secondDark: string,
+  secondLight: string,
+  thirdDark: string,
+  thirdLight: string,
+}
 
 interface ISingleYear {
   id: number,
   name: string,
   data: number[],
+  data2?: number[],
 }
 
 interface IData {
+  style: IStyle,
   years: ISingleYear[];
 }
 
@@ -26,6 +38,8 @@ const GraphCard = (props:IGraph) => {
   const [yearFilter, setYearFilter]: [string, (yearFilter: string) => void] = useState("2021")
 
   const [yearData, setYearData]: [number[], (yearData: number[]) => void] = useState(defaultYearData)
+  const [yearData2, setYearData2]: [number[], (yearData2: number[]) => void] = useState(defaultYearData)
+
 
   const years:string[] = props.data.years.map((year) => {
     return year.name
@@ -37,6 +51,7 @@ const GraphCard = (props:IGraph) => {
       return year.name === inputYear;
     });
     setYearData(yearDataFilter.data);
+    setYearData2(yearDataFilter.data2);
   }
 
   useEffect(() => {
@@ -45,17 +60,38 @@ const GraphCard = (props:IGraph) => {
 
   return (
     <section className="graph_card">
-      <Graph 
-        name={props.name}
-        data={yearData}
-      />
-      <YearNavigation 
+      {props.name === "Miles Run" && 
+        <LineGraph
+          name={props.name}
+          type={props.type}
+          style={props.data.style}
+          data={yearData}
+        />
+      }
+      {props.name === "Subscriber Count" && 
+        <BarLineGraph
+          name="Subscribers"
+          type={props.type}
+          style={props.data.style}
+          data={yearData}
+          data2={yearData2}
+        />
+      }
+      {props.name === "Angel Investments" && 
+        <LineGraph
+          name={props.name}
+          type={props.type}
+          style={props.data.style}
+          data={yearData}
+        />
+      }
+      <YearNavigation
         handler={updateYearData}
         years={years}
         yearFilter={yearFilter}
       />
     </section>
-  )
+  );
 }
 
 export { GraphCard }
