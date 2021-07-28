@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { LineGraph } from '../LineGraph/LineGraph';
+import { LineWTotalGraph } from '../LineWTotalGraph/LineWTotalGraph';
 import { BarLineGraph } from '../BarLineGraph/BarLineGraph';
 import { StackedBarGraph } from '../StackedBarGraph/StackedBarGraph';
 import { BarWTotalGraph } from "../BarWTotalGraph/BarWTotalGraph";
@@ -63,11 +63,12 @@ const GraphCard = (props:IGraph) => {
   return (
     <section className="graph_card">
       {props.name === "Miles Run" && (
-        <LineGraph
-          name={props.name}
+        <LineWTotalGraph
+          name={yearFilter}
           type={props.type}
           style={props.data.style}
           data={yearData}
+          data2={yearData2}
         />
       )}
       {props.name === "Subscriber Count" && (
