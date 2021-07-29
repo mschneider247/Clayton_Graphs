@@ -1,103 +1,52 @@
+
+
 const collectables = {
-  years: ["2020", "2021"],
-  2020: {
-    jan: [
-      {
-        name: "Spider King",
-        type: "comics"
-      }
-    ],
-    feb: [
-      {
-        name: "The Fourteenth Warrior",
-        type: "movies"
-      }
-    ],
-    mar: [],
-    apr: [
-      {
-        name: "A Bottanist's guide to Dingle Berries",
-        type: "books"
-      },
-      {
-        name: "Exploding Cute Things",
-        type: "cards"
-      }
-    ],
-    may: [],
-    jun: [
-      {
-        name: "Wanda's Unwatchables",
-        type: "cards"
-      }
-    ],
-    jul: [
-      {
-        name: "Where the Brown Fern Groans",
-        type: "comics"
-      }
-    ],
-    aug: [],
-    sep: [],
-    oct: [
-      {
-        name: "Rats at Barbeques",
-        type: "art"
-      },
-      {
-        name: "Dave Chappelle visits Venus",
-        type: "movies"
-      }
-    ],
-    nov: [],
-    dec: []
+  style: {
+    mainDark: "#27201A",
+    mainLight: "#CBBE8F",
+    secondDark: "#68671A",
+    secondLight: "#A8B163",
+    thirdDark: "#DF4239",
+    thirdLight: "#F99D5C",
+    fourthDark: "#EEAE3C",
+    fourthLight: "#E2BD64",
+    fifthDark: "#891A52",
+    fifthLight: "#B44058"
   },
-  2021: {
-    jan: [
-      {
-        name: "Magic the Rupturing",
-        type: "cards"
-      },
-      {
-        name: "Gonzo's Galaxy",
-        type: "comics"
-      },
-      {
-        name: "Mona Lisa",
-        type: "art"
-      }
-    ],
-    feb: [],
-    mar: [
-      {
-        name: "Elvis the Selfish Shellfish",
-        type: "comics"
-      }
-    ],
-    apr: [],
-    may: [],
-    jun: [
-      {
-        name: "Bad News Bears",
-        type: "comics"
-      }
-    ],
-    jul: [
-      {
-        name: "Cards Against Aliens",
-        type: "cards"
-      },
-      {
-        name: "Guttenburg Bible",
-        type: "books"
-      }
-    ],
-    aug: [],
-    sep: [],
-    oct: [],
-    nov: [],
-    dec: []
-  }
+  years: [
+    {
+      id: 2018,
+      name: "2018",
+      //     art, books, cards, comics, movies
+      data: [4, 4, 12, 23, 13],
+      //     total collectables added in year
+      data2: [56]
+    },
+    {
+      id: 2019,
+      name: "2019",
+      //     art, books, cards, comics, movies
+      data: [13, 24, 23, 12, 13],
+      //     total collectables added in year
+      data2: [85]
+    },
+    {
+      id: 2020,
+      name: "2020",
+      //     art, books, cards, comics, movies
+      data: [14, 21, 27, 4, 23],
+      //     total collectables added in year
+      data2: [89]
+    },
+    {
+      id: 2021,
+      name: "2021",
+      //     art, books, cards, comics, movies
+      data: [5, 10, 12, 7, 6],
+      //     total collectables added in year
+      data2: [40]
+    }
+  ]
 };   
 
 export { collectables }

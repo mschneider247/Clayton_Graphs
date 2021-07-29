@@ -9,7 +9,7 @@ import { subscriberCount } from '../../Data/subscriberCount'
 import { altAssetChallenge } from '../../Data/altAssetChallenge'
 import { angelInvestment } from '../../Data/angelInvestment'
 import { swingTrade } from '../../Data/swingTrade'
-// import { collectables } from '../../Data/collectables'
+import { collectables } from '../../Data/collectables'
 
 
 interface ISingleYear {
@@ -100,12 +100,12 @@ const App = () => {
         type: "Investments",
         data: swingTrade,
       },
-      // {
-      //   id: 6,
-      //   name: "Collectables",
-      //   type: "Investments",
-      //   data: collectables,
-      // }
+      {
+        id: 6,
+        name: "Collectables",
+        type: "Collectables",
+        data: collectables,
+      }
     ];
 
     setGraphCollection(buildGraphs)  

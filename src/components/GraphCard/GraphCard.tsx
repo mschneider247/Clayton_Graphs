@@ -5,6 +5,7 @@ import { StackedBarGraph } from '../StackedBarGraph/StackedBarGraph';
 import { PyramidGraph } from '../PyramidGraph/PyramidGraph';
 import { BarWTotalGraph } from "../BarWTotalGraph/BarWTotalGraph";
 import { YearNavigation } from '../YearNavigation/YearNavigation';
+import { PolarGraph } from '../PolarGraph/PolarGraph';
 import './GraphCard.css'
 
 interface IStyle {
@@ -98,6 +99,19 @@ const GraphCard = (props:IGraph) => {
           data2={yearData2}
         />
       )}
+      {props.name === "Alt Asset Challenge" && (
+        <PyramidGraph
+          name={props.name}
+          type={props.type}
+          style={props.data.style}
+          data={yearData}
+          data2={yearData2}
+          data3={yearData3}
+          data4={yearData4}
+          data5={yearData5}
+          data6={yearData6}
+        />
+      )}
       {props.name === "Angel Investments" && (
         <BarWTotalGraph
           name={yearFilter}
@@ -116,17 +130,13 @@ const GraphCard = (props:IGraph) => {
           data2={yearData2}
         />
       )}
-      {props.name === "Alt Asset Challenge" && (
-        <PyramidGraph
-          name={props.name}
+      {props.name === "Collectables" && (
+        <PolarGraph
+          name={yearFilter}
           type={props.type}
           style={props.data.style}
           data={yearData}
           data2={yearData2}
-          data3={yearData3}
-          data4={yearData4}
-          data5={yearData5}
-          data6={yearData6}
         />
       )}
       <YearNavigation
