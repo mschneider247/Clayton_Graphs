@@ -1,6 +1,6 @@
 # Clayton Graphs
 
-[live site]() <br/>
+[live site](https://mschneider247.github.io/Clayton_Graphs/) <br/>
 by: Michael Schneider
 
 ## Summary:
