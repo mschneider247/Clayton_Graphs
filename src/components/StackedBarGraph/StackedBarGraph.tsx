@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { Bar } from "react-chartjs-2";
+import './StackedBarGraph.css'
 
 interface IStyle {
   mainDark: string;
@@ -18,6 +20,7 @@ interface Iprops {
 }
 
 const StackedBarGraph = (props: Iprops) => {
+
   const data = {
     labels: [
       "Jan",
@@ -92,10 +95,29 @@ const StackedBarGraph = (props: Iprops) => {
     }
   };
 
+  let performanceTotal = 0;
+
+  const returnPerformanceColor = () => {
+    let total = 0;
+    let wins: any = props.data;
+    let loses: any = props.data2;
+    wins.forEach((win:any) => total += win);
+    loses.forEach((loss:any) => total += loss);
+    performanceTotal = total;
+    if (total > 0) {
+      return "green"
+    }
+    return "red";
+  }
+
   return (
     <article>
       <h3>Swing Trades</h3>
       <Bar data={data} options={options} />
+      <h4 className="alt_totals">
+        {props.name} performance: {" "} 
+        <span className={returnPerformanceColor()}>{performanceTotal}</span>
+      </h4>
     </article>
   );
 };

@@ -123,7 +123,7 @@ const GraphCard = (props:IGraph) => {
       )}
       {props.name === "Swing Trades" && (
         <StackedBarGraph
-          name={props.name}
+          name={yearFilter}
           type={props.type}
           style={props.data.style}
           data={yearData}
