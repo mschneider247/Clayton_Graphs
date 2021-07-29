@@ -7,7 +7,7 @@ interface Iprops {
 
 const FilterByType = (props: Iprops) => {
 
-  const categories: string[] = ["All", "Subscribers", "Investments", "Collectables", "Fitness"]
+  const categories: string[] = ["All", "Subscribers", "Investments", "Collectables", "Fitness", "Travel"]
   return (
     <section className="filter_by_type">
       {categories.map((category, index) => {

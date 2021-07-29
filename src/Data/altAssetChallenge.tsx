@@ -26,11 +26,6 @@ const altAssetChallenge = {
       data3: [1000, 200, 0, 0, 1242, 200, 200],
       //     Stephen Assets Value on Hand
       data4: [0, 812, 1038, 1113, 0, 1069, 1014],
-      
-      //     Clayton Current Total Bankroll value,
-      data5: [1242],
-      //     Stephen Current Total Bankroll value,
-      data6: [1214]
     },
   ]
 };
