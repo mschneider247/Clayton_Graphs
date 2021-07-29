@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Line } from "react-chartjs-2";
 import "./LineWTotalGraph.css";
 
@@ -20,8 +19,6 @@ interface Iprops {
 }
 
 const LineWTotalGraph = (props: Iprops) => {
-
-  const [articleClass, setArticleClass]: [string, (articleClass: string) => void] = useState<string>("");
 
   const data = {
     labels: [
@@ -77,28 +74,12 @@ const LineWTotalGraph = (props: Iprops) => {
       legend: {
         display: true,
         position: "bottom",
-        onHover: () => {
-          toggleTrigger();
-        },
-        onLeave: () => {
-          toggleTrigger();
-        }
       },
       title: {
         display: false
       }
     }
   };
-
-  const toggleTrigger = () => {
-    if (articleClass === '') {
-      setArticleClass("trigger")
-    }
-    else {
-      setArticleClass("")
-    }
-  }
-
 
   const returnYearTotal = () => {
     let total = 0;
@@ -110,7 +91,7 @@ const LineWTotalGraph = (props: Iprops) => {
 
   return (
     
-    <article className={articleClass}>
+    <article>
       <h3>Miles Run</h3>
       <Line data={data} options={options} />
       <h3>

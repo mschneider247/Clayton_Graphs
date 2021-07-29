@@ -95,7 +95,7 @@ const PyramidGraph = (props: Iprops) => {
     plugins: {
       legend: {
         display: true,
-        position: "bottom"
+        position: "bottom",
       },
       title: {
         display: false,
@@ -144,7 +144,7 @@ const PyramidGraph = (props: Iprops) => {
   };
 
   return (
-    <article>
+    <article >
       <h3>Alt Asset Challenge</h3>
       <Bar 
         data={data} 

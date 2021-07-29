@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Bar } from "react-chartjs-2";
 import './BarLineGraph.css'
 
@@ -21,8 +20,6 @@ interface Iprops {
 
 const BarLineGraph = (props: Iprops) => {
 
-  const [articleClass, setArticleClass]: [string, (articleClass: string) => void] = useState<string>("");
-  
   const data = {
     labels: [
       "Jan",
@@ -84,12 +81,6 @@ const BarLineGraph = (props: Iprops) => {
       legend: {
         display: true,
         position: "bottom",
-        onHover: () => {
-          toggleTrigger();
-        },
-        onLeave: () => {
-          toggleTrigger();
-        }
       },
       title: {
         display: false,
@@ -102,16 +93,8 @@ const BarLineGraph = (props: Iprops) => {
     }
   };
 
-  const toggleTrigger = () => {
-    if (articleClass === "") {
-      setArticleClass("trigger");
-    } else {
-      setArticleClass("");
-    }
-  };
-
   return (
-    <article className={articleClass}>
+    <article>
       <h3>Substack Subscribers</h3>
       <Bar
         data={data}
