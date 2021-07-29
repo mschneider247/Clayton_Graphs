@@ -91,7 +91,6 @@ const LineWTotalGraph = (props: Iprops) => {
   };
 
   const toggleTrigger = () => {
-    console.log("Test")
     if (articleClass === '') {
       setArticleClass("trigger")
     }

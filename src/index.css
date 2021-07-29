@@ -26,6 +26,10 @@ canvas {
   max-height: 500px;
 }
 
+.trigger {
+  cursor: pointer;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

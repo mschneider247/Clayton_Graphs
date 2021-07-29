@@ -1,7 +1,3 @@
 .year_total_miles_run {
   color: var(--light-green);
 }
-
-.trigger{
-  cursor: pointer;
-}
