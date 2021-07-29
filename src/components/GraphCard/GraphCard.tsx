@@ -6,6 +6,7 @@ import { PyramidGraph } from '../PyramidGraph/PyramidGraph';
 import { BarWTotalGraph } from "../BarWTotalGraph/BarWTotalGraph";
 import { YearNavigation } from '../YearNavigation/YearNavigation';
 import { PolarGraph } from '../PolarGraph/PolarGraph';
+import { MultiBarGraph } from '../MultiBarGraph/MultiBarGraph';
 import './GraphCard.css'
 
 interface IStyle {
@@ -90,6 +91,18 @@ const GraphCard = (props:IGraph) => {
           data2={yearData2}
         />
       )}
+      {props.name === "Collectables By Month" && (
+        <MultiBarGraph
+          name={props.name}
+          type={props.type}
+          style={props.data.style}
+          data={yearData}
+          data2={yearData2}
+          data3={yearData3}
+          data4={yearData4}
+          data5={yearData5}
+        />
+      )}
       {props.name === "Subscriber Count" && (
         <BarLineGraph
           name="Substack Subscribers"
@@ -123,7 +136,7 @@ const GraphCard = (props:IGraph) => {
       )}
       {props.name === "Swing Trades" && (
         <StackedBarGraph
-          name={props.name}
+          name={yearFilter}
           type={props.type}
           style={props.data.style}
           data={yearData}

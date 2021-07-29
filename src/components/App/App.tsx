@@ -10,6 +10,7 @@ import { altAssetChallenge } from '../../Data/altAssetChallenge'
 import { angelInvestment } from '../../Data/angelInvestment'
 import { swingTrade } from '../../Data/swingTrade'
 import { collectables } from '../../Data/collectables'
+import { collectablesByMonth } from '../../Data/collectablesByMonth'
 
 
 interface ISingleYear {
@@ -105,10 +106,16 @@ const App = () => {
         name: "Collectables",
         type: "Collectables",
         data: collectables,
+      },
+      {
+        id: 7,
+        name: "Collectables By Month",
+        type: "Collectables",
+        data: collectablesByMonth,
       }
     ];
 
-    setGraphCollection(buildGraphs)  
+    setGraphCollection(buildGraphs.sort(() => Math.random() - 0.5))  
     setLoading(false);
   }, []);
 

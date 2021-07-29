@@ -70,7 +70,7 @@ const PyramidGraph = (props: Iprops) => {
       x: {
         stacked: true,
         ticks: {
-          color: props.style.secondLight,
+          color: props.style.fourthDark,
           callback: (xvalue: number) => {
             return xvalue < 0 ? -xvalue : xvalue;
           }
@@ -129,17 +129,17 @@ const PyramidGraph = (props: Iprops) => {
 
   const returnClaytonTotal = () => {
     let total = 0;
-    props.data5?.forEach(number => {
-      total += number;
-    });
+    let cash: number[] = props.data;
+    let assets: any = props.data2;
+    total = cash[cash.length - 1] + assets[assets.length - 1];
     return total;
   };
 
   const returnStephenTotal = () => {
     let total = 0;
-    props.data6?.forEach(number => {
-      total += number;
-    });
+    let cash: any = props.data3;
+    let assets: any = props.data4;
+    total = cash[cash.length - 1] + assets[assets.length - 1];
     return total;
   };
 
