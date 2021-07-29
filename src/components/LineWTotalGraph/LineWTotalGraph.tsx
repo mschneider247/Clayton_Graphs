@@ -19,6 +19,7 @@ interface Iprops {
 }
 
 const LineWTotalGraph = (props: Iprops) => {
+
   const data = {
     labels: [
       "Jan",
@@ -72,15 +73,10 @@ const LineWTotalGraph = (props: Iprops) => {
     plugins: {
       legend: {
         display: true,
-        position: "bottom"
+        position: "bottom",
       },
       title: {
-        display: false,
-        color: props.style.mainLight,
-        text: "",
-        font: {
-          size: 16
-        }
+        display: false
       }
     }
   };
@@ -94,6 +90,7 @@ const LineWTotalGraph = (props: Iprops) => {
   };
 
   return (
+    
     <article>
       <h3>Miles Run</h3>
       <Line data={data} options={options} />

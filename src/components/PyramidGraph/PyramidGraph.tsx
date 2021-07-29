@@ -1,5 +1,5 @@
 import { Bar } from "react-chartjs-2";
-import './VerticalStackedBarGraph.css'
+import './PyramidGraph.css'
 
 interface IStyle {
   mainDark: string;
@@ -26,10 +26,7 @@ interface Iprops {
   data6?: number[];
 }
 
-const VerticalStackedBarGraph = (props: Iprops) => {
-
-  console.log("hello ? ? ? ? ? ?");
-  console.log(props)
+const PyramidGraph = (props: Iprops) => {
 
   const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
 
@@ -68,14 +65,16 @@ const VerticalStackedBarGraph = (props: Iprops) => {
   };
 
   const options = {
-    indexAxis: 'y',
+    indexAxis: "y",
     scales: {
       x: {
         stacked: true,
         ticks: {
-          color: props.style.secondLight
-        },
-
+          color: props.style.secondLight,
+          callback: (xvalue: number) => {
+            return xvalue < 0 ? -xvalue : xvalue;
+          }
+        }
       },
       y: {
         stacked: true,
@@ -96,7 +95,7 @@ const VerticalStackedBarGraph = (props: Iprops) => {
     plugins: {
       legend: {
         display: true,
-        position: "bottom"
+        position: "bottom",
       },
       title: {
         display: false,
@@ -104,6 +103,25 @@ const VerticalStackedBarGraph = (props: Iprops) => {
         text: props.name,
         font: {
           size: 18
+        }
+      },
+      tooltip: {
+        callbacks: {
+          label: (label: any) => {
+            let value = Number(label.formattedValue.replace(/,/g, ""));
+            let positiveOnly = value < 0 ? -value : value;
+            let returnString = "";
+            if (label.datasetIndex === 0) {
+              returnString = `Clayton Cash: $`;
+            } else if (label.datasetIndex === 1) {
+              returnString = `Clayton Assets: $`;
+            } else if (label.datasetIndex === 2) {
+              returnString = `Stephen Cash: $`;
+            } else if (label.datasetIndex === 3) {
+              returnString = `Stephen Assets: $`;
+            }
+            return `${returnString}${positiveOnly.toString()}`;
+          }
         }
       }
     }
@@ -126,7 +144,7 @@ const VerticalStackedBarGraph = (props: Iprops) => {
   };
 
   return (
-    <article>
+    <article >
       <h3>Alt Asset Challenge</h3>
       <Bar 
         data={data} 
@@ -141,4 +159,4 @@ const VerticalStackedBarGraph = (props: Iprops) => {
   );
 };
 
-export { VerticalStackedBarGraph };
+export { PyramidGraph };

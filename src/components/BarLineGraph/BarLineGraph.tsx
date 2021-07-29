@@ -1,4 +1,5 @@
 import { Bar } from "react-chartjs-2";
+import './BarLineGraph.css'
 
 interface IStyle {
   mainDark: string;
@@ -18,7 +19,7 @@ interface Iprops {
 }
 
 const BarLineGraph = (props: Iprops) => {
-  
+
   const data = {
     labels: [
       "Jan",
@@ -65,7 +66,7 @@ const BarLineGraph = (props: Iprops) => {
           color: props.style.secondLight,
           stepSize: 10,
           font: {
-            size: 14,
+            size: 14
           }
         }
       }
@@ -79,14 +80,14 @@ const BarLineGraph = (props: Iprops) => {
     plugins: {
       legend: {
         display: true,
-        position: "bottom"
+        position: "bottom",
       },
       title: {
         display: false,
         color: props.style.mainLight,
         text: props.name,
         font: {
-          size: 18,
+          size: 18
         }
       }
     }
