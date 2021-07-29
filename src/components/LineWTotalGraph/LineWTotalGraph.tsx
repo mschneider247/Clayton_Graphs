@@ -1,22 +1,24 @@
 import { Line } from "react-chartjs-2";
+import "./LineWTotalGraph.css";
 
 interface IStyle {
   mainDark: string;
   mainLight: string;
   secondDark: string;
   secondLight: string;
+  thirdDark: string;
+  thirdLight: string;
 }
 
 interface Iprops {
   style: IStyle;
   name: string;
   data: number[];
+  data2?: number[];
   type: string;
 }
 
-const LineGraph = (props: Iprops) => {
-  const name = props.name;
-
+const LineWTotalGraph = (props: Iprops) => {
   const data = {
     labels: [
       "Jan",
@@ -34,7 +36,7 @@ const LineGraph = (props: Iprops) => {
     ],
     datasets: [
       {
-        label: name,
+        label: "Miles Run",
         data: props.data,
         backgroundColor: props.style.secondDark,
         borderColor: props.style.secondLight,
@@ -51,13 +53,13 @@ const LineGraph = (props: Iprops) => {
         }
       },
       y: {
+        beginAtZero: true,
         ticks: {
-          beginAtZero: true,
           color: props.style.secondLight,
-          stepSize: 50,
+          stepSize: 10,
           font: {
             size: 14
-          },
+          }
         }
       }
     },
@@ -75,20 +77,32 @@ const LineGraph = (props: Iprops) => {
       title: {
         display: false,
         color: props.style.mainLight,
-        text: props.name,
+        text: "",
         font: {
-          size: 18
+          size: 16
         }
       }
     }
+  };
+
+  const returnYearTotal = () => {
+    let total = 0;
+    props.data2?.forEach(number => {
+      total += number;
+    });
+    return total;
   };
 
   return (
     <article>
       <h3>Miles Run</h3>
       <Line data={data} options={options} />
+      <h3>
+        {props.name + " total: "}
+        <span className="year_total_miles_run">{returnYearTotal()}</span>
+      </h3>
     </article>
   );
 };
 
-export { LineGraph };
+export { LineWTotalGraph };

@@ -1,16 +1,16 @@
 import { Bar } from "react-chartjs-2";
 
 interface IStyle {
-  mainDark: string,
-  mainLight: string,
-  secondDark: string,
-  secondLight: string,
-  thirdDark: string,
-  thirdLight: string,
+  mainDark: string;
+  mainLight: string;
+  secondDark: string;
+  secondLight: string;
+  thirdDark: string;
+  thirdLight: string;
 }
 
 interface Iprops {
-  style: IStyle,
+  style: IStyle;
   name: string;
   data: number[];
   data2?: number[];

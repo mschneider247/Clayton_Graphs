@@ -1,4 +1,5 @@
 .graph_collection {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
