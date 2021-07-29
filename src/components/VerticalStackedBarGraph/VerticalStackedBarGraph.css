@@ -1,0 +1,10 @@
+.clayton_total {
+  color: var(--light-green);
+  font-size: 1.6em;
+  margin-right: 80px;
+}
+
+.stephen_total {
+  color: var(--light-orange);
+  font-size: 1.6em;
+}

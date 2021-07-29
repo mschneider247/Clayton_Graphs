@@ -6,30 +6,38 @@ import { Footer } from '../Footer/Footer'
 import './App.css';
 import { milesRun } from '../../Data/milesRun'
 import { subscriberCount } from '../../Data/subscriberCount'
-// import { altAssetChallenge } from '../../Data/altAssetChallenge'
+import { altAssetChallenge } from '../../Data/altAssetChallenge'
 import { angelInvestment } from '../../Data/angelInvestment'
 import { swingTrade } from '../../Data/swingTrade'
 // import { collectables } from '../../Data/collectables'
 
 
 interface ISingleYear {
-  id: number,
-  name: string,
-  data: number[],
-  data2?: number[],
+  id: number;
+  name: string;
+  data: number[];
+  data2?: number[];
+  data3?: number[];
+  data4?: number[];
+  data5?: number[];
+  data6?: number[];
 }
 
 interface IStyle {
-  mainDark: string,
-  mainLight: string,
-  secondDark: string,
-  secondLight: string,
-  thirdDark: string,
-  thirdLight: string,
+  mainDark: string;
+  mainLight: string;
+  secondDark: string;
+  secondLight: string;
+  thirdDark: string;
+  thirdLight: string;
+  fourthDark?: string;
+  fourthLight?: string;
+  fifthDark?: string;
+  fifthLight?: string;
 }
 
 interface IData {
-  style: IStyle,
+  style: IStyle;
   years: ISingleYear[];
 }
 
@@ -74,12 +82,12 @@ const App = () => {
         type: "Subscribers",
         data: subscriberCount,
       },
-      // {
-      //   id: 3,
-      //   name: "Alternative Asset Bankroll Challenge",
-      //   type: "Investments",
-      //   data: altAssetChallenge,
-      // },
+      {
+        id: 3,
+        name: "Alt Asset Challenge",
+        type: "Investments",
+        data: altAssetChallenge,
+      },
       {
         id: 4,
         name: "Angel Investments",

@@ -1,155 +1,38 @@
 const altAssetChallenge = {
-  years: ["2021"],
-  2021: {
-    jan: {
-      Steven: {
-        totalValue: [439, 1123],
-        exchanges: [
-          {
-            assetName: "Tesla",
-            quantity: 0.5,
-            price: 648.12
-          },
-          {
-            assetName: "Game Stop",
-            quantity: -4,
-            price: 178
-          }
-        ]
-      },
-      Clayton: {
-        totalValue: [339, 1223],
-        exchanges: []
-      }
-    },
+  style: {
+    mainDark: "#27201A",
+    mainLight: "#CBBE8F",
+    secondDark: "#68671A",
+    secondLight: "#A8B163",
+    thirdDark: "#DF4239",
+    thirdLight: "#F99D5C",
+    fourthDark: "#EEAE3C",
+    fourthLight: "#E2BD64",
+    fifthDark: "#891A52",
+    fifthLight: "#B44058",
+  },
+  years: [
+    {
+      id: 2021,
+      name: "2021",
+      //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
 
-    feb: {
-      Steven: {
-        totalValue: [814, 373],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [339, 1223],
-        exchanges: [
-          {
-            assetName: "Dodge Coin",
-            quantity: 300,
-            price: 0.07
-          }
-        ]
-      }
-    },
+      //     Clayton Cash on Hand
+      data: [1000, 800, 600, 400, 200, 0, 234],
+      //     Clayton Assets Value on Hand
+      data2: [0, 210, 414, 690, 900, 1234, 1008],
 
-    mar: {
-      Steven: {
-        totalValue: [549, 1243],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [318, 1244],
-        exchanges: []
-      }
+      //     Stephen Cash on Hand
+      data3: [1000, 200, 0, 0, 1242, 200, 200],
+      //     Stephen Assets Value on Hand
+      data4: [0, 812, 1038, 1113, 0, 1069, 1014],
+      
+      //     Clayton Current Total Bankroll value,
+      data5: [1242],
+      //     Stephen Current Total Bankroll value,
+      data6: [1214]
     },
-
-    apr: {
-      Steven: {
-        totalValue: [549, 1468],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [318, 1299],
-        exchanges: []
-      }
-    },
-
-    may: {
-      Steven: {
-        totalValue: [549, 1220],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [318, 1159],
-        newPurchases: []
-      }
-    },
-
-    jun: {
-      Steven: {
-        totalValue: [549, 1243],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [318, 1673],
-        newPurchases: []
-      }
-    },
-
-    jul: {
-      Steven: {
-        totalValue: [549, 1243],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [318, 1673],
-        newPurchases: []
-      }
-    },
-
-    aug: {
-      Steven: {
-        totalValue: [],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [],
-        exchanges: []
-      }
-    },
-
-    sep: {
-      Steven: {
-        totalValue: [],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [],
-        exchanges: []
-      }
-    },
-
-    oct: {
-      Steven: {
-        totalValue: [],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [],
-        exchanges: []
-      }
-    },
-
-    nov: {
-      Steven: {
-        totalValue: [],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [],
-        exchanges: []
-      }
-    },
-
-    dec: {
-      Steven: {
-        totalValue: [],
-        exchanges: []
-      },
-      Clayton: {
-        totalValue: [],
-        exchanges: []
-      }
-    }
-  }
+  ]
 };
 
 export { altAssetChallenge }

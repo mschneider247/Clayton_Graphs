@@ -2,23 +2,31 @@ import { GraphCard } from '../GraphCard/GraphCard';
 import './GraphCollection.css';
 
 interface IStyle {
-  mainDark: string,
-  mainLight: string,
-  secondDark: string,
-  secondLight: string,
-  thirdDark: string,
-  thirdLight: string,
+  mainDark: string;
+  mainLight: string;
+  secondDark: string;
+  secondLight: string;
+  thirdDark: string;
+  thirdLight: string;
+  fourthDark?: string;
+  fourthLight?: string;
+  fifthDark?: string;
+  fifthLight?: string;
 }
 
 interface ISingleYear {
-  id: number,
-  name: string,
-  data: number[],
-  data2?: number[],
+  id: number;
+  name: string;
+  data: number[];
+  data2?: number[];
+  data3?: number[];
+  data4?: number[];
+  data5?: number[];
+  data6?: number[];
 }
 
 interface IData {
-  style: IStyle,
+  style: IStyle;
   years: ISingleYear[];
 }
 
