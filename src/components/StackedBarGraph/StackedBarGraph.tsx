@@ -42,7 +42,7 @@ const StackedBarGraph = (props: Iprops) => {
         borderWidth: 1
       },
       {
-        label: "loosers",
+        label: "losers",
         data: props.data2,
         backgroundColor: props.style.thirdDark,
         borderColor: props.style.thirdLight,

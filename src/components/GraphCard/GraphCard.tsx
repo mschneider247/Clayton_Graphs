@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { LineWTotalGraph } from '../LineWTotalGraph/LineWTotalGraph';
 import { BarLineGraph } from '../BarLineGraph/BarLineGraph';
 import { StackedBarGraph } from '../StackedBarGraph/StackedBarGraph';
-import { VerticalStackedBarGraph } from '../VerticalStackedBarGraph/VerticalStackedBarGraph';
+import { PyramidGraph } from '../PyramidGraph/PyramidGraph';
 import { BarWTotalGraph } from "../BarWTotalGraph/BarWTotalGraph";
 import { YearNavigation } from '../YearNavigation/YearNavigation';
 import './GraphCard.css'
@@ -117,7 +117,7 @@ const GraphCard = (props:IGraph) => {
         />
       )}
       {props.name === "Alt Asset Challenge" && (
-        <VerticalStackedBarGraph
+        <PyramidGraph
           name={props.name}
           type={props.type}
           style={props.data.style}
