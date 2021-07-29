@@ -1,0 +1,29 @@
+.art_total {
+  color: var(--light-green);
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.books_total {
+  color: var(--light-orange);
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.cards_total {
+  color: var(--light-magenta);
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.comics_total {
+  color: var(--green);
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.movies_total {
+  color: var(--yellow);
+  font-size: 1.2em;
+  margin-right: 20px;
+}
