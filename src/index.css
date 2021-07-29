@@ -21,6 +21,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button:hover {
+  transform: scale(1.05);
+}
+
 canvas {
   margin: 60px 0 4% 0;
   max-height: 500px;
@@ -28,6 +32,7 @@ canvas {
 
 canvas:hover {
   cursor: pointer;
+  transform: scale(1.01);
 }
 
 code {
