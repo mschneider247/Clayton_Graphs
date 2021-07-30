@@ -115,8 +115,12 @@ const StackedBarGraph = (props: Iprops) => {
       <h3>Swing Trades</h3>
       <Bar data={data} options={options} />
       <h4 className="alt_totals">
-        {props.name} performance: {" "} 
-        <span className={returnPerformanceColor()}>{performanceTotal}</span>
+        <section className="section_totals">
+          <div>
+            {props.name} performance: {" "} 
+            <span className={returnPerformanceColor()}>{performanceTotal}</span>
+          </div>
+        </section>
       </h4>
     </article>
   );

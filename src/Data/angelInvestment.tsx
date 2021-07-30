@@ -12,8 +12,8 @@ const angelInvestment = {
       id: 2020,
       name: "2020",
       //     jan  feb  mar  apr  may  jun  jul  aug  sep  oct  nov  dec
-      data: [4, 16, 14, 13, 14, 25, 2, 2, 2, 3, 36, 35],
-      data2: [166]
+      data: [4, 16, 14, 13, 14, 25, 14, 8, 26, 19, 36, 35],
+      data2: [224]
     },
     {
       id: 2021,
