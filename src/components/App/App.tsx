@@ -4,14 +4,13 @@ import { FilterByType } from '../FilterByType/FilterByType'
 import { GraphCollection } from '../GraphCollection/GraphCollection'
 import { Footer } from '../Footer/Footer'
 import './App.css';
-import { milesRun } from '../../Data/milesRun'
-import { subscriberCount } from '../../Data/subscriberCount'
-import { altAssetChallenge } from '../../Data/altAssetChallenge'
-import { angelInvestment } from '../../Data/angelInvestment'
-import { swingTrade } from '../../Data/swingTrade'
-import { collectables } from '../../Data/collectables'
-import { collectablesByMonth } from '../../Data/collectablesByMonth'
-
+import { milesRun } from '../../data/milesRun'
+import { subscriberCount } from '../../data/subscriberCount'
+import { altAssetChallenge } from '../../data/altAssetChallenge'
+import { angelInvestment } from '../../data/angelInvestment'
+import { swingTrade } from '../../data/swingTrade'
+import { collectables } from '../../data/collectables'
+import { collectablesByMonth } from '../../data/collectablesByMonth'
 
 interface ISingleYear {
   id: number;
