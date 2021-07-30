@@ -32,10 +32,16 @@ canvas {
 
 canvas:hover {
   cursor: pointer;
-  transform: scale(1.01);
+  transform: scale(1.012);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.section_totals {
+  display: flex;
+  flex: wrap;
+  justify-content: center;
 }

@@ -125,11 +125,38 @@ const MultiBarGraph = (props: Iprops) => {
       <Bar data={data} options={options} />
       <h4>Totals Collected:</h4>
       <h4 className="alt_totals">
-        Art:{" "}<span className="art_total">{returnCollectableTotal(props.data)}</span>
-        Books:{" "}<span className="books_total">{returnCollectableTotal(props.data2)}</span>
-        Cards:{" "}<span className="cards_total">{returnCollectableTotal(props.data3)}</span>
-        Comics:{" "}<span className="comics_total">{returnCollectableTotal(props.data4)}</span>
-        Movies:{" "}<span className="movies_total">{returnCollectableTotal(props.data5)}</span>
+        <section className="section_totals">
+          <div>
+            Art:{" "}
+            <span className="art_total">
+              {returnCollectableTotal(props.data)}
+            </span>
+          </div>
+          <div>
+            Books:{" "}
+            <span className="books_total">
+              {returnCollectableTotal(props.data2)}
+            </span>
+          </div>
+          <div>
+            Cards:{" "}
+            <span className="cards_total">
+              {returnCollectableTotal(props.data3)}
+            </span>
+          </div>
+          <div>
+            Comics:{" "}
+            <span className="comics_total">
+              {returnCollectableTotal(props.data4)}
+            </span>
+          </div>
+          <div>
+            Movies:{" "}
+            <span className="movies_total">
+              {returnCollectableTotal(props.data5)}
+            </span>
+          </div>
+        </section>
       </h4>
     </article>
   );

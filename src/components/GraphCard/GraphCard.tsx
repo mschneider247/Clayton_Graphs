@@ -57,8 +57,6 @@ const GraphCard = (props:IGraph) => {
   const [yearData5, setYearData5]: [number[], (yearData5: number[]) => void] = useState(defaultYearData);
   const [yearData6, setYearData6]: [number[], (yearData6: number[]) => void] = useState(defaultYearData);
   
-
-
   const years:string[] = props.data.years.map((year) => {
     return year.name
   })

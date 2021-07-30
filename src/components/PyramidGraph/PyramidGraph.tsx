@@ -152,8 +152,14 @@ const PyramidGraph = (props: Iprops) => {
       />
       <h4>Current Portfolio Values:</h4>
       <h4 className="alt_totals">
-        Clayton $<span className="clayton_total">{returnClaytonTotal()}</span>
-        Stephen $<span className="stephen_total">{returnStephenTotal()}</span>
+        <section className="section_totals">
+          <div>
+            Clayton $<span className="clayton_total">{returnClaytonTotal()}</span>
+          </div>
+          <div>
+            Stephen $<span className="stephen_total">{returnStephenTotal()}</span>
+          </div>
+        </section>
       </h4>
     </article>
   );
