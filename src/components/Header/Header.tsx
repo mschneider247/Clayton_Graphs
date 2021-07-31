@@ -1,17 +1,17 @@
 import './Header.css';
+import claytonGraph from '../../assets/claytonGraph.png'
 
 const Header = () => {
 
-  let titleImage = `images/claytonGraph.jpeg`;
+  const titleImage = `images/claytonGraph.png`;
   console.log(titleImage)
 
   return (
     <header className="main_title">
-      <h1>Clayton Graphs!</h1>
       <img 
         className="title_image"
+        src={claytonGraph}
         alt="Clayton Graph" 
-        src={titleImage}
       />
     </header>
   )
