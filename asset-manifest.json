@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Clayton_Graphs/static/css/main.d674dfb1.chunk.css",
-    "main.js": "/Clayton_Graphs/static/js/main.17080371.chunk.js",
-    "main.js.map": "/Clayton_Graphs/static/js/main.17080371.chunk.js.map",
+    "main.css": "/Clayton_Graphs/static/css/main.1d5222ea.chunk.css",
+    "main.js": "/Clayton_Graphs/static/js/main.380080f8.chunk.js",
+    "main.js.map": "/Clayton_Graphs/static/js/main.380080f8.chunk.js.map",
     "runtime-main.js": "/Clayton_Graphs/static/js/runtime-main.65ad653c.js",
     "runtime-main.js.map": "/Clayton_Graphs/static/js/runtime-main.65ad653c.js.map",
     "static/js/2.6f5251dd.chunk.js": "/Clayton_Graphs/static/js/2.6f5251dd.chunk.js",
     "static/js/2.6f5251dd.chunk.js.map": "/Clayton_Graphs/static/js/2.6f5251dd.chunk.js.map",
     "index.html": "/Clayton_Graphs/index.html",
-    "static/css/main.d674dfb1.chunk.css.map": "/Clayton_Graphs/static/css/main.d674dfb1.chunk.css.map",
+    "static/css/main.1d5222ea.chunk.css.map": "/Clayton_Graphs/static/css/main.1d5222ea.chunk.css.map",
     "static/js/2.6f5251dd.chunk.js.LICENSE.txt": "/Clayton_Graphs/static/js/2.6f5251dd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.65ad653c.js",
     "static/js/2.6f5251dd.chunk.js",
-    "static/css/main.d674dfb1.chunk.css",
-    "static/js/main.17080371.chunk.js"
+    "static/css/main.1d5222ea.chunk.css",
+    "static/js/main.380080f8.chunk.js"
   ]
 }
