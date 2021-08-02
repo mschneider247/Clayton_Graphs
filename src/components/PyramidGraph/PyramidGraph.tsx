@@ -15,6 +15,7 @@ interface IStyle {
 }
 
 interface Iprops {
+  id: number;
   style: IStyle;
   name: string;
   type: string;
@@ -24,6 +25,7 @@ interface Iprops {
   data4?: number[];
   data5?: number[];
   data6?: number[];
+  updateId: Function;
 }
 
 const PyramidGraph = (props: Iprops) => {
@@ -144,20 +146,19 @@ const PyramidGraph = (props: Iprops) => {
   };
 
   return (
-    <article >
-      <h3>Alt Asset Challenge</h3>
-      <Bar 
-        data={data} 
-        options={options} 
-      />
+    <article>
+      <h3 onClick={() => props.updateId(props.id)}>Alt Asset Challenge</h3>
+      <Bar data={data} options={options} />
       <h4>Current Portfolio Values:</h4>
       <h4 className="alt_totals">
         <section className="section_totals">
           <div>
-            Clayton $<span className="clayton_total">{returnClaytonTotal()}</span>
+            Clayton $
+            <span className="clayton_total">{returnClaytonTotal()}</span>
           </div>
           <div>
-            Stephen $<span className="stephen_total">{returnStephenTotal()}</span>
+            Stephen $
+            <span className="stephen_total">{returnStephenTotal()}</span>
           </div>
         </section>
       </h4>

@@ -11,11 +11,13 @@ interface IStyle {
 }
 
 interface Iprops {
+  id: number;
   style: IStyle;
   name: string;
   data: number[];
   data2?: number[];
   type: string;
+  updateId: Function;
 }
 
 const BarLineGraph = (props: Iprops) => {
@@ -95,13 +97,10 @@ const BarLineGraph = (props: Iprops) => {
 
   return (
     <article>
-      <h3>Substack Subscribers</h3>
-      <Bar
-        data={data}
-        options={options}  
-      />
+      <h3 onClick={() => props.updateId(props.id)}>Substack Subscribers</h3>
+      <Bar data={data} options={options} />
     </article>
-  )
+  );
 }
 
 export { BarLineGraph }

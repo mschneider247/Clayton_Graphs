@@ -43,6 +43,7 @@ interface IGraph {
   name: string;
   type: string;
   data: IData;
+  updateId: Function;
 }
 
 const defaultYearData = [0];
@@ -82,15 +83,18 @@ const GraphCard = (props:IGraph) => {
     <section className="graph_card">
       {props.name === "Miles Run" && (
         <LineWTotalGraph
+          id={props.id}
           name={yearFilter}
           type={props.type}
           style={props.data.style}
           data={yearData}
           data2={yearData2}
+          updateId={props.updateId}
         />
       )}
       {props.name === "Collectables By Month" && (
         <MultiBarGraph
+          id={props.id}
           name={props.name}
           type={props.type}
           style={props.data.style}
@@ -99,19 +103,23 @@ const GraphCard = (props:IGraph) => {
           data3={yearData3}
           data4={yearData4}
           data5={yearData5}
+          updateId={props.updateId}
         />
       )}
       {props.name === "Subscriber Count" && (
         <BarLineGraph
+          id={props.id}
           name="Substack Subscribers"
           type={props.type}
           style={props.data.style}
           data={yearData}
           data2={yearData2}
+          updateId={props.updateId}
         />
       )}
       {props.name === "Alt Asset Challenge" && (
         <PyramidGraph
+          id={props.id}
           name={props.name}
           type={props.type}
           style={props.data.style}
@@ -121,33 +129,40 @@ const GraphCard = (props:IGraph) => {
           data4={yearData4}
           data5={yearData5}
           data6={yearData6}
+          updateId={props.updateId}
         />
       )}
       {props.name === "Angel Investments" && (
         <BarWTotalGraph
+          id={props.id}
           name={yearFilter}
           type={props.type}
           style={props.data.style}
           data={yearData}
           data2={yearData2}
+          updateId={props.updateId}
         />
       )}
       {props.name === "Swing Trades" && (
         <StackedBarGraph
+          id={props.id}
           name={yearFilter}
           type={props.type}
           style={props.data.style}
           data={yearData}
           data2={yearData2}
+          updateId={props.updateId}
         />
       )}
       {props.name === "Collectables" && (
         <PolarGraph
+          id={props.id}
           name={yearFilter}
           type={props.type}
           style={props.data.style}
           data={yearData}
           data2={yearData2}
+          updateId={props.updateId}
         />
       )}
       <YearNavigation

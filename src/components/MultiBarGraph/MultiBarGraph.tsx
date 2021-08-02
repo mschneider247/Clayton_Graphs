@@ -15,6 +15,7 @@ interface IStyle {
 }
 
 interface Iprops {
+  id: number;
   style: IStyle;
   name: string;
   type: string;
@@ -24,6 +25,7 @@ interface Iprops {
   data4?: number[];
   data5?: number[];
   data6?: number[];
+  updateId: Function;
 }
 
 const MultiBarGraph = (props: Iprops) => {
@@ -121,7 +123,7 @@ const MultiBarGraph = (props: Iprops) => {
 
   return (
     <article>
-      <h3>{props.name}</h3>
+      <h3 onClick={() => props.updateId(props.id)}>{props.name}</h3>
       <Bar data={data} options={options} />
       <h4>Totals Collected:</h4>
       <h4 className="alt_totals">

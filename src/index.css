@@ -21,7 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-button:hover {
+button:hover, h3:hover {
   transform: scale(1.05);
 }
 
@@ -38,6 +38,14 @@ canvas:hover {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h3 {
+  cursor: pointer;
+}
+
+h1, h2, h4, h5, p {
+  cursor: default;
 }
 
 .section_totals {

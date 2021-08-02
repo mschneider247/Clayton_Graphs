@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Header } from '../Header/Header'
 import { FilterByType } from '../FilterByType/FilterByType'
+import { ClearButton } from '../ClearButton/ClearButton'
 import { GraphCollection } from '../GraphCollection/GraphCollection'
 import { Footer } from '../Footer/Footer'
 import './App.css';
@@ -56,6 +57,8 @@ const App = () => {
 
   const [typeFilter, setTypeFilter]: [string, (loading: string) => void] = useState<string>("All");
 
+  const [idFilter, setIdFilter]: [number, (loading: number) => void] = useState<number>(0);
+
   const [loading, setLoading]: [boolean, (loading: boolean) => void] = useState<boolean>(true);
 
   const filterGraphsByType = (): IGraph[] => {
@@ -63,6 +66,11 @@ const App = () => {
     if (typeFilter !== "All") {
       filteredGraphs = filteredGraphs.filter(graph => {
         return graph.type === typeFilter
+      })
+    }
+    if (idFilter !== 0) {
+      filteredGraphs = filteredGraphs.filter(graph => {
+        return graph.id === idFilter
       })
     }
     return filteredGraphs
@@ -74,7 +82,7 @@ const App = () => {
         id: 1,
         name: "Miles Run",
         type: "Fitness",
-        data: milesRun
+        data: milesRun,
       },
       {
         id: 2,
@@ -121,13 +129,20 @@ const App = () => {
   return (
     <main className="main_body">
       <Header />
-      <FilterByType 
-        handler={setTypeFilter}
-        typeFilter={typeFilter}
-      />
+      {idFilter === 0 ? 
+        <FilterByType 
+          handler={setTypeFilter}
+          typeFilter={typeFilter}
+        />
+        :
+        <ClearButton
+          handler={setIdFilter}
+        />
+      }
       {!loading &&
         <GraphCollection 
           graphs={filterGraphsByType()}
+          updateId={setIdFilter}
         />
       }
       <Footer />

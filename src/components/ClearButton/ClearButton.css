@@ -1,0 +1,18 @@
+.filter_by_type {
+  margin-bottom: 3%;
+}
+
+.clear_button {
+  background-color: transparent;
+  border-style: solid;
+  cursor: pointer;
+  border-radius: 4px;
+  color: var(--light-green);
+  font-size: 1.2em;
+  margin: 20px 10px;
+  outline: none;
+  text-align: left;
+}
+
+
+
