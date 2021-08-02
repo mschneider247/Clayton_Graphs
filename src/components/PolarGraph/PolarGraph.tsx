@@ -91,10 +91,10 @@ const PolarGraph = (props: Iprops) => {
     <article>
       <h3 onClick={() => props.updateId(props.id)}>Collectables</h3>
       <PolarArea data={data} options={options} />
-      <h3>
+      <h4>
         {"Total collected in " + props.name + ": "}
         <span className="polar_year_total">{returnYearTotal()}</span>
-      </h3>
+      </h4>
     </article>
   );
 };

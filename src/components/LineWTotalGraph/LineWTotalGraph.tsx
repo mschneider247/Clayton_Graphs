@@ -95,10 +95,10 @@ const LineWTotalGraph = (props: Iprops) => {
     <article>
       <h3 onClick={() => props.updateId(props.id)}>Miles Run</h3>
       <Line data={data} options={options} />
-      <h3>
+      <h4>
         {props.name + " total: "}
         <span className="year_total_miles_run">{returnYearTotal()}</span>
-      </h3>
+      </h4>
     </article>
   );
 };

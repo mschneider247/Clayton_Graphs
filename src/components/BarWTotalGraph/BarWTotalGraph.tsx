@@ -98,10 +98,10 @@ const BarWTotalGraph = (props: Iprops) => {
     <article>
       <h3 onClick={() => props.updateId(props.id)}>Angel Investments</h3>
       <Bar data={data} options={options} />
-      <h3>
+      <h4>
         {props.name + " total: "}
         <span className="year_total">{returnYearTotal()}</span>
-      </h3>
+      </h4>
     </article>
   );
 };

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Header } from '../Header/Header'
 import { FilterByType } from '../FilterByType/FilterByType'
+import { ClearButton } from '../ClearButton/ClearButton'
 import { GraphCollection } from '../GraphCollection/GraphCollection'
 import { Footer } from '../Footer/Footer'
 import './App.css';
@@ -46,7 +47,6 @@ interface IGraph {
   name: string;
   type: string;
   data: IData;
-  
 }
 
 const graphs:IGraph[] = [];
@@ -129,10 +129,16 @@ const App = () => {
   return (
     <main className="main_body">
       <Header />
-      <FilterByType 
-        handler={setTypeFilter}
-        typeFilter={typeFilter}
-      />
+      {idFilter === 0 ? 
+        <FilterByType 
+          handler={setTypeFilter}
+          typeFilter={typeFilter}
+        />
+        :
+        <ClearButton
+          handler={setIdFilter}
+        />
+      }
       {!loading &&
         <GraphCollection 
           graphs={filterGraphsByType()}
