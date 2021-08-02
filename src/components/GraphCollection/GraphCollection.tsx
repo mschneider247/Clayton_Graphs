@@ -39,6 +39,7 @@ interface IGraph {
 
 interface IProps {
   graphs: IGraph[];
+  updateId: Function;
 }
 
 const GraphCollection = (props: IProps) => {
@@ -51,6 +52,7 @@ const GraphCollection = (props: IProps) => {
         name={graph.name}
         type={graph.type}
         data={graph.data}
+        updateId={props.updateId}
       />
     );
   })

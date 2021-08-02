@@ -11,11 +11,13 @@ interface IStyle {
 }
 
 interface Iprops {
+  id: number;
   style: IStyle;
   name: string;
   data: number[];
   data2?: number[];
   type: string;
+  updateId: Function;
 }
 
 const BarWTotalGraph = (props: Iprops) => {
@@ -94,7 +96,7 @@ const BarWTotalGraph = (props: Iprops) => {
 
   return (
     <article>
-      <h3>Angel Investments</h3>
+      <h3 onClick={() => props.updateId(props.id)}>Angel Investments</h3>
       <Bar data={data} options={options} />
       <h3>
         {props.name + " total: "}

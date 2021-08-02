@@ -11,11 +11,13 @@ interface IStyle {
 }
 
 interface Iprops {
+  id: number;
   style: IStyle;
   name: string;
   data: number[];
   data2?: number[];
   type: string;
+  updateId: Function;
 }
 
 const LineWTotalGraph = (props: Iprops) => {
@@ -90,9 +92,8 @@ const LineWTotalGraph = (props: Iprops) => {
   };
 
   return (
-    
     <article>
-      <h3>Miles Run</h3>
+      <h3 onClick={() => props.updateId(props.id)}>Miles Run</h3>
       <Line data={data} options={options} />
       <h3>
         {props.name + " total: "}

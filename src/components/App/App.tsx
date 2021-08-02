@@ -46,6 +46,7 @@ interface IGraph {
   name: string;
   type: string;
   data: IData;
+  
 }
 
 const graphs:IGraph[] = [];
@@ -56,6 +57,8 @@ const App = () => {
 
   const [typeFilter, setTypeFilter]: [string, (loading: string) => void] = useState<string>("All");
 
+  const [idFilter, setIdFilter]: [number, (loading: number) => void] = useState<number>(0);
+
   const [loading, setLoading]: [boolean, (loading: boolean) => void] = useState<boolean>(true);
 
   const filterGraphsByType = (): IGraph[] => {
@@ -63,6 +66,11 @@ const App = () => {
     if (typeFilter !== "All") {
       filteredGraphs = filteredGraphs.filter(graph => {
         return graph.type === typeFilter
+      })
+    }
+    if (idFilter !== 0) {
+      filteredGraphs = filteredGraphs.filter(graph => {
+        return graph.id === idFilter
       })
     }
     return filteredGraphs
@@ -74,7 +82,7 @@ const App = () => {
         id: 1,
         name: "Miles Run",
         type: "Fitness",
-        data: milesRun
+        data: milesRun,
       },
       {
         id: 2,
@@ -128,6 +136,7 @@ const App = () => {
       {!loading &&
         <GraphCollection 
           graphs={filterGraphsByType()}
+          updateId={setIdFilter}
         />
       }
       <Footer />

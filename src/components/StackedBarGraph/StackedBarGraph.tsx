@@ -12,11 +12,13 @@ interface IStyle {
 }
 
 interface Iprops {
+  id: number;
   style: IStyle;
   name: string;
   data: number[];
   data2?: number[];
   type: string;
+  updateId: Function;
 }
 
 const StackedBarGraph = (props: Iprops) => {
@@ -112,12 +114,12 @@ const StackedBarGraph = (props: Iprops) => {
 
   return (
     <article>
-      <h3>Swing Trades</h3>
+      <h3 onClick={() => props.updateId(props.id)}>Swing Trades</h3>
       <Bar data={data} options={options} />
       <h4 className="alt_totals">
         <section className="section_totals">
           <div>
-            {props.name} performance: {" "} 
+            {props.name} performance:{" "}
             <span className={returnPerformanceColor()}>{performanceTotal}</span>
           </div>
         </section>

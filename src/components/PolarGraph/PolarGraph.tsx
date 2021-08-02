@@ -15,11 +15,13 @@ interface IStyle {
 }
 
 interface Iprops {
+  id: number;
   style: IStyle;
   name: string;
   type: string;
   data: number[];
   data2?: number[];
+  updateId: Function;
 }
 
 const PolarGraph = (props: Iprops) => {
@@ -87,7 +89,7 @@ const PolarGraph = (props: Iprops) => {
 
   return (
     <article>
-      <h3>Collectables</h3>
+      <h3 onClick={() => props.updateId(props.id)}>Collectables</h3>
       <PolarArea data={data} options={options} />
       <h3>
         {"Total collected in " + props.name + ": "}
